@@ -15,11 +15,13 @@
 
   <section class="form_parent">
 
+    <h1>しまっ</h1>
+
     <!-- 新規会員登録 -->
 
     <div class="firstbox">
       <p class="newperson_text">アカウントをお持ちでない方はこちら</p>
-      <a class="action_btn" href="todo_register.php">新規会員登録</a>
+      <button class="action_btn" id="new_btn" onclick="loction.href='todo_register.php'">新規会員登録</a>
     </div>
 
     <!-- ログイン -->
@@ -34,7 +36,7 @@
           <input type="text" class="password" name="password" placeholder="パスワード">
         </div>
         <div>
-          <button class="action_btn">ログイン</button>
+          <button class="action_btn" id="login_btn">ログイン</button>
         </div>
       </div>
 

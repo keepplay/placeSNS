@@ -148,13 +148,16 @@ button {
 
 /* 色の変数 */
 :root {
+  --color_white: #fff;
   --color_black: #333;
-  --color_blue: #529fff;
+  --color_blue: #00d7ee;
+  --color_blue_light: #aefbff;
   --color_orange: #ffaf3f;
   --color_orange_hover: #ff8539;
 }
+
 body {
-  background: linear-gradient(118.47deg, #E9EDF0 0.61%, #E9EDF0 100%);
+  background: var(--color_white);
 }
 
 h1 {
@@ -189,13 +192,13 @@ button {
 }
 
 button:hover {
-  background: #def1ff;
+  background: var(--color_blue_light);
 
 }
 
 
 button:active {
-  background: #def1ff;
+  background: var(--color_blue_light);
   box-shadow: inset 11px 11px 22px #d6dadd,
     inset -11px -11px 22px #fcffff;
 }
@@ -222,13 +225,16 @@ input::placeholder {
 }
 
 input:focus {
-  background: #def1ff;
+  background: var(--color_blue_light);
+
 
 }
 
 
 
 /* 個別*/
+
+
 .firstbox {
   border-bottom: 1px solid #B1BDCE;
   display: flex;
@@ -250,7 +256,15 @@ input:focus {
   font-size: 14px;
 }
 
-.action_btn,
+
 .password {
+  margin-top: 24px;
+}
+
+#new_btn {
+  margin-top: 8px;
+}
+
+#login_btn {
   margin-top: 24px;
 }
