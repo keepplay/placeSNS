@@ -14,16 +14,16 @@
 </head>
 
 <body>
-  <form action="post_create.php" method="POST">
+  <form action="post_create.php" method="POST" enctype="multipart/form-data">
       <a href="post_read.php">一覧画面</a>
       <a href="post_logout.php">logout</a>
       <div>
         post_text: <input type="text" name="post_text">
       </div>
+      <div>
+        post_image: <input type="file" name="post_image" accept="image/*" capture="camera">
+      </div>
       <!-- あとで追加します。by hashi -->
-      <!-- <div>
-        post_img: <input type="file" name="post_img">
-      </div> -->
       <!-- <div>
         post_place: <input type="hidden" name="post_place">
       </div> -->

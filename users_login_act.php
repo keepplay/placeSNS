@@ -27,6 +27,7 @@ if(!$val){
     echo ('<a href="todo_login.php">login</a>');
     exit();
 }else{
+    // OKだったらこっち
     $_SESSION['session_id']= session_id();
     $_SESSION['is_admin']= $val['is_admin'];
     $_SESSION['user_name']= $val['user_name'];
