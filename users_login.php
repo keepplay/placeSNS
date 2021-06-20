@@ -4,25 +4,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/kasho.css">
+
   <title>ログイン画面</title>
 </head>
 
 <body>
-  <form action="./users_login_act.php" method="post">
-    <fieldset>
-      <legend>todoリストログイン画面</legend>
-      <div>
-        username: <input type="text" name="user_name">
+
+  <!-- 大きい箱　幅をCssで指定 -->
+
+  <section class="form_parent">
+
+    <!-- 新規会員登録 -->
+
+    <div class="firstbox">
+      <p class="newperson_text">アカウントをお持ちでない方はこちら</p>
+      <a class="action_btn" href="todo_register.php">新規会員登録</a>
+    </div>
+
+    <!-- ログイン -->
+    <form class="form" action="./users_login_act.php" method="post">
+
+
+      <div class="secondbox">
+        <div>
+          <input type="text" class="username" name="user_name" placeholder="ユーザー名">
+        </div>
+        <div>
+          <input type="text" class="password" name="password" placeholder="パスワード">
+        </div>
+        <div>
+          <button class="action_btn">ログイン</button>
+        </div>
       </div>
-      <div>
-        password: <input type="password" name="password">
-      </div>
-      <div>
-        <button>Login</button>
-      </div>
-      <a href="todo_register.php">or register</a>
-    </fieldset>
-  </form>
+
+    </form>
 
 </body>
 
