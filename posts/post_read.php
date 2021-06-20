@@ -20,6 +20,8 @@ if ($status == false) {
   foreach ($result as $record) {
     $output .= "<tr>";
     $output .= "<td>{$record["post_text"]}</td>";
+    // サイズは調整してください
+    $output .= "<td><img src='{$record["post_image"]}'></td>";
     $output .= "<td>{$record["post_created_at"]}</td>";
     $output .= "<td><a href='post_delete.php?post_id={$record["post_id"]}'>delete</a></td>";
     $output .= "</tr>";
