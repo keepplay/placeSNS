@@ -180,10 +180,8 @@ h1 {
 
 
 button {
-
   width: 260px;
   height: 40px;
-
   background: linear-gradient(134.17deg, #EEF0F5 4.98%, #E6E9EF 94.88%);
   box-shadow: -12px -12px 20px rgba(255, 255, 255, 0.8),
     10px 10px 20px rgba(166, 180, 200, 0.7);
@@ -256,15 +254,14 @@ input:focus {
   font-size: 14px;
 }
 
-
-.password {
+.useremail,
+.password,
+#login_gamen_btn,
+#login_btn,
+#touroku_btn {
   margin-top: 24px;
 }
 
 #new_btn {
   margin-top: 8px;
-}
-
-#login_btn {
-  margin-top: 24px;
 }
