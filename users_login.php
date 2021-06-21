@@ -15,8 +15,8 @@
 
   <section class="form_parent">
 
-    <div>
-      <img src="./image/rogo.svg">
+    <div class="rogo">
+      <img src="./image/rogo.png">
     </div>
 
 

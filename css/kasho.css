@@ -105,7 +105,7 @@ a {
 }
 
 img {
-  width: 100%;
+  width: 70%;
   height: auto;
   vertical-align: bottom;
 }
@@ -164,11 +164,17 @@ body {
 
 }
 
+.rogo{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 90px;
+}
+
+
 h1 {
-  margin-top: 50px;
-  margin-bottom: 10px;
   text-align: center;
-  font-size: 21px;
+  font-size: 19px;
+  font-weight: 800;
 }
 
 .form_parent {
