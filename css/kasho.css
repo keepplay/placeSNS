@@ -279,3 +279,8 @@ input:focus {
 .form_group:not(:first-of-type) {
   margin-top: 24px;
 }
+
+.vErrorMsg {
+  font-size: 14px;
+  color: red;
+}
