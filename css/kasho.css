@@ -144,7 +144,9 @@ button {
   --color_white: #fff;
   --color_black: #333;
   --color_blue: #00d7ee;
+
   --color_blue_light: #d0fdff;
+
   --color_orange: #ffaf3f;
   --color_orange_hover: #ff8539;
 }
@@ -156,7 +158,9 @@ body {
     -apple-system,
     BlinkMacSystemFont,
     sans-serif;
+
   background: linear-gradient(118.47deg, #E9EDF0 0.61%, #E9EDF0 100%);
+
 
 }
 
@@ -180,10 +184,8 @@ h1 {
 
 
 button {
-
   width: 260px;
   height: 40px;
-
   background: linear-gradient(134.17deg, #EEF0F5 4.98%, #E6E9EF 94.88%);
   box-shadow: -12px -12px 20px rgba(255, 255, 255, 0.8),
     10px 10px 20px rgba(166, 180, 200, 0.7);
@@ -205,6 +207,7 @@ button:active {
 
 input {
 
+
   width: 260px;
   height: 48px;
   padding: 10px 16px 8px;
@@ -213,6 +216,8 @@ input {
     inset 5px 5px 10px rgba(166, 180, 200, 0.75);
   border-radius: 4px;
   font-size: 16px;
+
+
 }
 
 input::placeholder {
@@ -227,7 +232,7 @@ input::placeholder {
 }
 
 input:focus {
-  background: var(--color_blue_light);
+  border-color: var(--color_blue_dark);
 
 
 }
@@ -235,6 +240,16 @@ input:focus {
 
 
 /* 個別*/
+
+.title {
+  font-size: 18px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: bold;
+
+}
 
 
 .firstbox {
@@ -244,6 +259,7 @@ input:focus {
   align-items: center;
   flex-direction: column;
   padding: 40px;
+  margin-top: 30px;
 }
 
 .secondbox {
@@ -258,7 +274,13 @@ input:focus {
   font-size: 14px;
 }
 
-.password {
+
+.password 
+.useremail,
+.logim_password,
+#login_gamen_btn,
+#login_btn,
+#touroku_btn {
   margin-top: 24px;
 }
 
@@ -266,8 +288,25 @@ input:focus {
   margin-top: 8px;
 }
 
-#login_btn {
-  margin-top: 24px;
+/* 新規登録 */
+
+.touroku_input {
+  height: 48px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.form_group:not(:first-of-type) {
+  margin: 24px 0 0;
+}
+
+.vErrorMsg {
+  font-size: 14px;
+  color: red;
 }
 
 .label {
