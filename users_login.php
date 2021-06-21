@@ -15,7 +15,9 @@
 
   <section class="form_parent">
 
-    <h1>しまっ</h1>
+    <div>
+      <img src="./image/rogo.jpg" width="100" height="100">
+    </div>
 
     <!-- 新規会員登録 -->
 
