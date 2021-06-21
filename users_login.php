@@ -18,7 +18,6 @@
     <div>
       <img src="./image/rogo.jpg" width="100" height="100">
     </div>
-
     <!-- 新規会員登録 -->
 
     <div class="firstbox">
@@ -32,10 +31,10 @@
 
       <div class="secondbox">
         <div>
-          <input type="text" class="username" name="user_name" placeholder="ユーザー名">
+          <input type="text" class="login_username" name="user_name" placeholder="ユーザー名">
         </div>
         <div>
-          <input type="text" class="password" name="password" placeholder="パスワード">
+          <input type="password" class="logim_password" name="password" placeholder="パスワード">
         </div>
         <div>
           <button class="action_btn" id="login_btn">ログイン</button>
@@ -43,7 +42,8 @@
       </div>
 
     </form>
-
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+    <script src="kasho.js"></script>
 </body>
 
 </html>

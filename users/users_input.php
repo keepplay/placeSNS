@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/kasho.css">
 
-  <title>ユーザー管理画面（入力画面）</title>
+  <title>新規会員登録</title>
 </head>
 
 <body>
@@ -17,15 +17,23 @@
 
       <!-- 会員登録 -->
       <div class="firstbox">
-        <div>
-          <input type="text" class="username" name="username" placeholder="ユーザー名">
+        <div class="form_group">
+          <p class="label">ニックネーム(20文字以内)
+
+          </p>
+          <input type="text" class="touroku_input" id="username" name="username" maxlength="20" validate="required blacklist" placeholder="例)くまもとフジオ" required>
         </div>
-        <div>
-          <input type="email" class="useremail" name="email" placeholder="shima@example.com">
+
+        <div class="form_group">
+          <p class="label">メールアドレス</p>
+          <input type="email" class="touroku_input" id="email" name="email" validate="required blacklist mailadd" placeholder="shima@example.com" required>
         </div>
-        <div>
-          <input type="text" class="password" name="password" placeholder="パスワード">
+
+        <div class="form_group">
+          <p class="label" 　>パスワード</p>
+          <input type="text" class="touroku_input" id="password" name="password" validate="required blacklist alpNumeric" placeholder="8文字以上の半角英数記号" required>
         </div>
+
         <div>
           <button class="action_btn" id="touroku_btn">登録する</button>
         </div>
@@ -37,7 +45,8 @@
 
       </div>
     </form>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="kasho.js"></script>
 </body>
 
 </html>
