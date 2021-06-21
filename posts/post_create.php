@@ -1,5 +1,8 @@
 <?php
-
+// var_dump($_POST);
+// exit();
+// var_dump($_FILES);
+// exit();
 include("../functions.php");
 session_start();
 // check_session_id();
@@ -43,17 +46,24 @@ if(isset($_FILES['post_image'])&& $_FILES['post_image']['error']==0){
 
 
 $post_text = $_POST['post_text'];
+$post_lat = $_POST['post_lat'];
+$post_lng = $_POST['post_lng'];
 // $deadline = $_POST['deadline'];
-$post_image = $unique_name;
+$post_image = $filename_to_save;
 
+// var_dump($post_lat);
+// var_dump($post_lng);
+// exit();
 $pdo = connect_to_db();
 
-$sql = 'INSERT INTO posts_table(post_id, post_text, post_place, post_image, post_created_at) 
-VALUES(NULL, :post_text, NULL, :post_image, sysdate())';
+$sql = 'INSERT INTO posts_table(post_id, post_text, post_lat, post_lng, post_image, post_created_at) 
+VALUES(NULL, :post_text, :post_lat, :post_lng, :post_image, sysdate())';
 
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':post_text', $post_text, PDO::PARAM_STR);
 $stmt->bindValue(':post_image', $post_image, PDO::PARAM_STR);
+$stmt->bindValue(':post_lat', $post_lat, PDO::PARAM_STR);
+$stmt->bindValue(':post_lng', $post_lng, PDO::PARAM_STR);
 // $stmt->bindValue(':deadline', $deadline, PDO::PARAM_STR);
 $status = $stmt->execute();
 

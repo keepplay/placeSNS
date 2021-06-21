@@ -38,6 +38,12 @@
       <div>
         post_image: <input type="file" name="post_image" accept="image/*" capture="camera">
       </div>
+      <div>
+        <input type="hidden" id="post_lat" name="post_lat" >
+      </div>
+      <div>
+        <input type="hidden" id="post_lng" name="post_lng">
+      </div>
       <!-- あとで追加します。by hashi -->
       <!-- <div>
         post_place: <input type="hidden" name="post_place">
@@ -57,7 +63,6 @@
 
     const option = {
       enableHighAccuracy: true,
-      disableScrollWheelZoom: true,
       maximumAge: 20000,
       timeout: 1000000,
     };
@@ -83,12 +88,16 @@
         zoom: 20, });
         console.log(position);
         console.log(lat,lng);
+        $("#post_lat").val(lat);
+        $("#post_lng").val(lng);
+
       }
 
       // 位置情報の取得
       function getPosition() {
         navigator.geolocation
           .getCurrentPosition(mapsInit, showError, option);
+          // .watchPosition(mapsInit, showError, option);
       }
 
       // jsファイルの読み込みが終わってから処理を開始。
