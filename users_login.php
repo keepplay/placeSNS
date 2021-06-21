@@ -18,6 +18,7 @@
     <div>
       <img src="./image/rogo.jpg" width="100" height="100">
     </div>
+
     <!-- 新規会員登録 -->
 
     <div class="firstbox">
