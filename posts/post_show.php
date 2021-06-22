@@ -38,6 +38,15 @@ if ($status == false) {
 </head>
 <body>
     <main>
+        <div>
+            <!-- とりあえず一番上に作りました -->
+            コメント入力のとこ
+            <form action="./post_comment_create.php" method="post">
+                <input type="text" name="comment_text">
+                <input type="hidden" name="post_id" value=<?=$post_id?>>
+                <input type="submit" >
+            </form>
+        </div>
         <!-- コメントされる側のの投稿 -->
         <div>
             <!-- デザイン皆無です、お願いします -->
