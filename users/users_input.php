@@ -12,11 +12,15 @@
 <body>
   <section class="form_parent">
 
+    <div class="icon">
+      <img src="../image/icon.png">
+    </div>
+
     <form class="form" action="users_create.php" method="POST">
-      <h1 class="title">新規会員登録</h1>
+      <h2 class="title">新規会員登録</h2>
 
       <!-- 会員登録 -->
-      <div class="firstbox">
+      <div class="thirdbox">
         <div class="form_group">
           <p class="label">ニックネーム(20文字以内)
 
