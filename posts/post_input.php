@@ -38,11 +38,11 @@ session_start();
 </head>
 
 <body>
-  <div class="warapper">
 
+  <div class="warapper">
     <header class="site_header">
       <div class="site_logo">
-        <img src="../image/rogo.png" >
+        <img src="../image/rogo.png">
       </div>
       <nav class="gnav">
         <ul class="gnav__menu">
@@ -59,21 +59,19 @@ session_start();
       </nav>
     </header>
 
-    <form action="post_create.php" method="POST" enctype="multipart/form-data">
-      <div class="form_parent">
+    <div class="form_parent">
+      <form action="post_create.php" method="POST" enctype="multipart/form-data">
 
         <div class="post_text">
-          なんとなく書く<textarea class="text_area" rows="6" cols="40" name="post_text" placeholder="好きなテキストを入力">
-</textarea>
+          なんとなく書く<textarea class="text_area" rows="10" cols="50" name="post_text" placeholder="テキストを入力" autofocus></textarea>
         </div>
 
         <div class="post_img">
-          <div class="file_btn">
-
-            <label for="file" class="file_btn_text">写真を添付</label>
-          </div>
-          <input type="file" id="file" class="fileinput" name="post_image" accept="image/*" capture="camera">
+          <label for="file" class="file_btn_text">
+            <div class="file_btn"><span>写真を添付<span>
+            </div>
           </label>
+          <input type="file" id="file" class="fileinput" name="post_image" accept="image/*" capture="camera">
 
           <div id="preview"></div>
         </div>
@@ -89,12 +87,13 @@ session_start();
         <div class="submit_btn">
           <button>書き残す</button>
         </div>
-      </div>
 
-      <!-- あとで追加します。by hashi -->
-      <div>
-        post_place: <input type="hidden" name="post_place">
-      </div>
+    </div>
+
+    <!-- あとで追加します。by hashi -->
+    <div>
+      post_place: <input type="hidden" name="post_place">
+    </div>
 
     </form>
 
