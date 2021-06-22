@@ -109,6 +109,7 @@ img {
   vertical-align: bottom;
 }
 
+input,
 button {
   background-color: transparent;
   border: none;
@@ -179,7 +180,6 @@ body {
 }
 
 
-
 button {
   width: 260px;
   height: 40px;
@@ -187,6 +187,8 @@ button {
   box-shadow: -12px -12px 20px rgba(255, 255, 255, 0.8),
     10px 10px 20px rgba(166, 180, 200, 0.7);
   border-radius: 4px;
+  font-size: 14px;
+
 
 }
 
@@ -194,7 +196,6 @@ button:hover {
   background: var(--color_blue_light);
 
 }
-
 
 button:active {
   background: var(--color_blue_light);
@@ -322,8 +323,51 @@ header {
 
 /* 写真投稿 */
 
+.post_img {
+  margin-top: 24px;
+}
+
 #preview img {
   width: 200px;
   margin: 10px;
   border: solid 1px silver;
+}
+
+
+
+/* fileinputは隠す */
+
+.fileinput {
+  display: none;
+}
+
+.file_btn {
+  width: 260px;
+  height: 40px;
+  background: linear-gradient(134.17deg, #EEF0F5 4.98%, #E6E9EF 94.88%);
+  box-shadow: -12px -12px 20px rgba(255, 255, 255, 0.8),
+    10px 10px 20px rgba(166, 180, 200, 0.7);
+  border-radius: 4px;
+  text-align: center;
+
+
+}
+
+.file_btn:hover {
+  background: var(--color_blue_light);
+}
+
+.file_btn:active {
+  background: var(--color_blue_light);
+  box-shadow: inset 11px 11px 22px #d6dadd,
+    inset -11px -11px 22px #fcffff;
+}
+
+.file_btn_text {
+  font-size: 14px;
+}
+
+/* 送信ボタン */
+.submit_btn {
+  margin-top: 48px;
 }
