@@ -61,13 +61,17 @@ session_start();
       <div class="form_parent">
 
         <div class="post_text">
-          なんとなく書く: <textarea class="text_area" rows="6" cols="40" name="post_text">
+          なんとなく書く<textarea class="text_area" rows="6" cols="40" name="post_text" placeholder="好きなテキストを入力">
 </textarea>
         </div>
 
         <div class="post_img">
-          写真を選択: <input type="file" id="img" name="post_image" accept="image/*" capture="camera">
+          <div class="file_btn">
 
+            <label for="file" class="file_btn_text">写真を添付</label>
+          </div>
+          <input type="file" id="file" class="fileinput" name="post_image" accept="image/*" capture="camera">
+          </label>
 
           <div id="preview"></div>
         </div>
@@ -78,7 +82,9 @@ session_start();
         <div>
           <input type="hidden" id="post_lng" name="post_lng">
         </div>
-        <div>
+
+
+        <div class="submit_btn">
           <button>書き残す</button>
         </div>
       </div>
