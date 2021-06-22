@@ -4,13 +4,13 @@ function connect_to_db()
 {
   //それぞれのデータベースを登録して、コメントアウトして切り替える
   // ふじおさん用
-  // $dbn = 'mysql:dbname=　　　　;charset=utf8;port=3306;host=localhost';
+  $dbn = 'mysql:dbname=gsacf_l05_08;charset=utf8;port=3306;host=localhost';
 
   // かしょちゃん用
   // $dbn = 'mysql:dbname=gsacf_l05_13;charset=utf8;port=3306;host=localhost';
 
   // はっしー用
-  $dbn = 'mysql:dbname=team_php;charset=utf8;port=3306;host=localhost';
+  // $dbn = 'mysql:dbname=team_php;charset=utf8;port=3306;host=localhost';
 
 
   $user = 'root';
