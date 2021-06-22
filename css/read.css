@@ -92,6 +92,7 @@ sub {
 }
 
 body {
+  margin-top: 0;
   line-height: 1.8;
   line-height: 2;
   font-size: 18px;
@@ -157,12 +158,13 @@ body {
     -apple-system,
     BlinkMacSystemFont,
     sans-serif;
-  background: linear-gradient(118.47deg, #E9EDF0 0.61%, #E9EDF0 100%)
+  background: linear-gradient(118.47deg, #E9EDF0 0.61%, #E9EDF0 100%);
+  margin-top: 0;
 }
 
 .warapper {
+
   width: 360px;
-  margin: 64px auto;
 
 }
 
@@ -237,16 +239,22 @@ input::placeholder {
 
 /* ヘッダー */
 header {
-  /* position: fixed; */
-  width: 100%;
+  background: linear-gradient(134.17deg, #EEF0F5 4.98%, #E6E9EF 94.88%);
+  box-shadow: -12px -12px 20px rgba(255, 255, 255, 0.8),
+    10px 10px 20px rgba(166, 180, 200, 0.7);
+  width: 340px;
   height: 60px;
+  position: fixed;
+  display: block;
+
 }
 
 .site_header {
   display: flex;
-  padding: 60px 20px;
   justify-content: space-between;
   width: 100%;
+  /* position: fixed; */
+
 }
 
 .site_logo {
@@ -296,7 +304,6 @@ header {
 
 /* 投稿 */
 .post_area {
-  margin: 24px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -328,17 +335,18 @@ header {
 
 }
 
-.post_time{
+.post_time {
   font-size: 14px;
-  color:#686868;
+  color: #686868;
 }
 
-.post_icon{
+.post_icon {
   margin: 24px;
 }
-.post_icon_area{
-display: flex;
-justify-content: flex-start;
 
-align-items: center;
+.post_icon_area {
+  display: flex;
+  justify-content: flex-start;
+
+  align-items: center;
 }
