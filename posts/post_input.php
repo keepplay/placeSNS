@@ -5,30 +5,7 @@ session_start();
 ?>
 
 <!DOCTYPE html>
-<html lang="ja">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/post.css">
-  <title>投稿作成</title>
-  <!-- demoマップ表示用 いい感じに変更しちゃってください -->
-  <!-- <style>
-    html,
-    body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-
-    #map {
-      height: calc(100% - 102px);
-      margin: 0;
-      padding: 0;
-    }
-  </style> -->
-</head>
-<!DOCTYPE html>
 <html lang="ja">
 
 <head>
@@ -95,6 +72,14 @@ session_start();
       <div>
         <input type="hidden" id="post_lng" name="post_lng">
       </div>
+      <!-- あとで追加します。by hashi -->
+      <div>
+        post_place: <input type="hidden" name="post_place">
+      </div>
+      <div>
+        <button>submit</button>
+      </div>
+
   </div>
 
   <!-- あとで追加します。by hashi -->
@@ -151,6 +136,7 @@ session_start();
       console.log(lat, lng);
       $("#post_lat").val(lat);
       $("#post_lng").val(lng);
+
 
     }
 
