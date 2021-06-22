@@ -158,6 +158,12 @@ body {
   background: linear-gradient(118.47deg, #E9EDF0 0.61%, #E9EDF0 100%)
 }
 
+.warapper {
+  width: 360px;
+  margin: 64px auto;
+
+}
+
 
 
 .form_parent {
@@ -196,11 +202,9 @@ button:active {
     inset -11px -11px 22px #fcffff;
 }
 
-input {
 
-
+.text_area {
   width: 260px;
-  height: 48px;
   padding: 10px 16px 8px;
   background: linear-gradient(134.17deg, #EEF1F5 4.98%, #E6E9EF 94.88%);
   box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.75),
@@ -211,6 +215,7 @@ input {
 
 }
 
+/*
 input::placeholder {
   font-family: Noto Sans;
   font-style: normal;
@@ -218,11 +223,10 @@ input::placeholder {
   font-size: 14px;
   line-height: 19px;
   letter-spacing: 0.05em;
-  height: 48px;
   color: #757575;
-}
+} */
 
-input:focus {
+.text_area:focus {
   border-color: var(--color_blue_light);
 
 
@@ -245,6 +249,8 @@ header {
 
 .site_logo {
   width: 60px;
+  font-size: 36px;
+  font-weight: bold;
 }
 
 .gnav__menu {
@@ -289,6 +295,8 @@ header {
 /* 投稿 */
 
 .post_area {
+  width: 360px;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -310,4 +318,12 @@ header {
   margin: 24px;
   padding: 0;
 
+}
+
+/* 写真投稿 */
+
+#preview img {
+  width: 200px;
+  margin: 10px;
+  border: solid 1px silver;
 }

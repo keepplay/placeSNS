@@ -4,9 +4,10 @@ session_start();
 // check_session_id();
 ?>
 
-<!DOCTYPE html>
 
+<!DOCTYPE html>
 <html lang="ja">
+
 
 <head>
   <meta charset="UTF-8">
@@ -37,66 +38,69 @@ session_start();
 </head>
 
 <body>
+  <div class="warapper">
 
-  <header class="site_header">
-    <h1 class="site_logo">stillart</h1>
-    <nav class="gnav">
-      <ul class="gnav__menu">
+    <header class="site_header">
+      <p class="site_logo">stillart</p>
+      <nav class="gnav">
+        <ul class="gnav__menu">
 
-        <li class="gnav__menu__item"><a href="post_read.php"><span class="material-icons">
-              home
-            </span></li>
+          <li class="gnav__menu__item"><a href="post_read.php"><span class="material-icons">
+                home
+              </span></li>
 
-        <li class="gnav__menu__item"><a href="post_logout.php"><span class="material-icons">
-              logout
-            </span></a></li>
+          <li class="gnav__menu__item"><a href="post_logout.php"><span class="material-icons">
+                logout
+              </span></a></li>
 
-      </ul>
-    </nav>
-  </header>
+        </ul>
+      </nav>
+    </header>
 
-  <div class="post_area">
     <form action="post_create.php" method="POST" enctype="multipart/form-data">
+      <div class="form_parent">
 
-      <div class="post_text">
-        なんとなく書く: <input type="text" name="post_text" placeholder="いまの気持ち">
+        <div class="post_text">
+          なんとなく書く: <textarea class="text_area" rows="6" cols="40" name="post_text">
+</textarea>
+        </div>
+
+        <div class="post_img">
+          写真を選択: <input type="file" id="img" name="post_image" accept="image/*" capture="camera">
+
+
+          <div id="preview"></div>
+        </div>
+
+        <div>
+          <input type="hidden" id="post_lat" name="post_lat">
+        </div>
+        <div>
+          <input type="hidden" id="post_lng" name="post_lng">
+        </div>
+        <div>
+          <button>書き残す</button>
+        </div>
       </div>
 
-      <div class="post_img">
-        写真: <input type="file" name="post_image" accept="image/*" capture="camera">
-      </div>
-
-      <div>
-        <input type="hidden" id="post_lat" name="post_lat">
-      </div>
-      <div>
-        <input type="hidden" id="post_lng" name="post_lng">
-      </div>
       <!-- あとで追加します。by hashi -->
       <div>
         post_place: <input type="hidden" name="post_place">
       </div>
-      <div>
-        <button>submit</button>
-      </div>
+
+    </form>
+
 
   </div>
-
-  <!-- あとで追加します。by hashi -->
-  <!-- <div>
-        post_place: <input type="hidden" name="post_place">
-      </div> -->
-  <div>
-    <button>書き残す</button>
-  </div>
-  </form>
-
-  <section class="map_area">
+  <!-- <section class="map_area">
     <p>位置情報取得&Map表示</p>
     <div id="map"></div>
-  </section>
+  </section> -->
+
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- <script src="../kasho.js"></script> -->
+
   <script src='https://www.bing.com/api/maps/mapcontrol?key=AjFcJuWxXYNwMC0PS8_ZQb8m92xQad3BpO3K9s7XJVoAoGuHv0eQIe4Vr5wIjQaN' async defer></script>
   <script>
     // map表示用に使用する変数
@@ -137,7 +141,6 @@ session_start();
       $("#post_lat").val(lat);
       $("#post_lng").val(lng);
 
-
     }
 
     // 位置情報の取得
@@ -153,6 +156,8 @@ session_start();
       getPosition();
     }
   </script>
+
+  <script src="../kasho.js"></script>
 
 
 </body>
