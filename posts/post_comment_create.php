@@ -18,7 +18,7 @@ $comment_text = $_POST['comment_text'];
 
 $pdo = connect_to_db();
 
-$sql = 'INSERT INTO comment_table(id, comment_text, post_id, created_at)
+$sql = 'INSERT INTO comment_table(id, comment_text, post_id, comment_created_at)
 VALUES(NULL, :comment_text, :post_id, sysdate())';
 
 $stmt = $pdo->prepare($sql);

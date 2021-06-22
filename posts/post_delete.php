@@ -1,16 +1,17 @@
 <?php
-include("functions.php");
+include("../functions.php");
 session_start();
-check_session_id();
-
-$id = $_GET["id"];
+// check_session_id();
+var_dump($_GET);
+exit();
+$post_id = $_GET["post_id"];
 
 $pdo = connect_to_db();
 
-$sql = "DELETE FROM todo_table WHERE id=:id";
+$sql = "DELETE FROM posts_table WHERE post_id=:post_id";
 
 $stmt = $pdo->prepare($sql);
-$stmt->bindValue(':id', $id, PDO::PARAM_INT);
+$stmt->bindValue(':post_id', $post_id, PDO::PARAM_INT);
 $status = $stmt->execute();
 
 if ($status == false) {
@@ -18,6 +19,6 @@ if ($status == false) {
   echo json_encode(["error_msg" => "{$error[2]}"]);
   exit();
 } else {
-  header("Location:todo_read.php");
+  header("Location:post_read.php");
   exit();
 }
