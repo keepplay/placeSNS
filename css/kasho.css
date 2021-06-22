@@ -105,7 +105,7 @@ a {
 }
 
 img {
-  width: 70%;
+  width: 20%;
   height: auto;
   vertical-align: bottom;
 }
@@ -162,15 +162,22 @@ body {
 
 }
 
-.rogo{
+.icon{
   display: flex;
   justify-content: center;
-  margin-bottom: 90px;
+  margin-bottom: 50px;
 }
 
 
 h1 {
   margin: 16px auto;
+  text-align: center;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+h2{
+  margin: top 10px;
   text-align: center;
   font-size: 19px;
   font-weight: 800;
@@ -260,6 +267,15 @@ input:focus {
 }
 
 .secondbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.thirdbox {
+  border-bottom: 1px solid #B1BDCE;
   display: flex;
   justify-content: center;
   align-items: center;
