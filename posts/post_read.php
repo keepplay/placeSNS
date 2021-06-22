@@ -18,13 +18,13 @@ if ($status == false) {
   $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
   $output = "";
   foreach ($result as $record) {
-    $output .= "<tr>";
-    $output .= "<td>{$record["post_text"]}</td>";
+    $output .= "<div>";
+    $output .= "<p>{$record["post_text"]}</p>";
     // サイズは調整してください
-    $output .= "<td><img src='{$record["post_image"]}'></td>";
-    $output .= "<td>{$record["post_created_at"]}</td>";
-    $output .= "<td><a href='post_delete.php?post_id={$record["post_id"]}'>delete</a></td>";
-    $output .= "</tr>";
+    $output .= "<img src='{$record["post_image"]}'>";
+    $output .= "<p>{$record["post_created_at"]}</p>";
+    $output .= "<a href='post_delete.php?post_id={$record["post_id"]}'>delete</a>";
+    $output .= "</div>";
   }
   unset($value);
 }
@@ -40,22 +40,23 @@ if ($status == false) {
 </head>
 
 <body>
-  <a href="post_input.php">入力画面</a>
-  <a href="../users_logout.php">logout</a>
-  <table>
-    <thead>
-      <tr>
-        <th>post_text</th>
-        <th>post_created_at</th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- ここに<tr><td>deadline</td><td>todo</td><tr>の形でデータが入る -->
-      <?= $output ?>
-    </tbody>
-  </table>
+
+    <a href="post_input.php">入力画面</a>
+    <a href="../users_logout.php">logout</a>
+    <div>
+      <div>
+        <!-- ここに
+                  <div>
+                    <p>投稿内容</p>
+                    <img src="画像">
+                    <p>投稿時間
+                    <a href="削除へ">
+                  </div>
+                  の形でデータが入る -->
+        <?= $output ?>
+      </div>
+    </div>
+
 </body>
 
 </html>
