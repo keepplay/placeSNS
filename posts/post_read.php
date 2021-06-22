@@ -36,26 +36,26 @@ if ($status == false) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DB連携型todoリスト（一覧画面）</title>
+  <title>一覧画面</title>
 </head>
 
 <body>
-    <a href="post_input.php">入力画面</a>
-    <a href="../users_logout.php">logout</a>
-    <table>
-      <thead>
-        <tr>
-          <th>post_text</th>
-          <th>post_created_at</th>
-          <th></th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- ここに<tr><td>deadline</td><td>todo</td><tr>の形でデータが入る -->
-        <?= $output ?>
-      </tbody>
-    </table>
+  <a href="post_input.php">入力画面</a>
+  <a href="../users_logout.php">logout</a>
+  <table>
+    <thead>
+      <tr>
+        <th>post_text</th>
+        <th>post_created_at</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- ここに<tr><td>deadline</td><td>todo</td><tr>の形でデータが入る -->
+      <?= $output ?>
+    </tbody>
+  </table>
 </body>
 
 </html>
