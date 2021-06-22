@@ -45,9 +45,9 @@
         <input type="hidden" id="post_lng" name="post_lng">
       </div>
       <!-- あとで追加します。by hashi -->
-      <!-- <div>
+      <div>
         post_place: <input type="hidden" name="post_place">
-      </div> -->
+      </div>
       <div>
         <button>submit</button>
       </div>
@@ -106,7 +106,7 @@
         getPosition();
       }
 
-      
+
 
 
   </script>
