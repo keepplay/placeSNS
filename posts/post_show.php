@@ -8,13 +8,14 @@ session_start();
 
 $pdo = connect_to_db();
 
-$post_id = $_POST["post_id"];
+$post_id = $_GET["post_id"];
 
 $sql = 'SELECT * FROM posts_table WHERE post_id=:post_id';
 
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':post_id', $post_id, PDO::PARAM_INT);
 $status = $stmt->execute();
+
 
 if ($status == false) {
     $error = $stmt->errorInfo();
