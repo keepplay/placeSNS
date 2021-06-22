@@ -23,8 +23,10 @@ if ($status == false) {
     exit();
 } else {
     $record = $stmt->fetch(PDO::FETCH_ASSOC);
-    unset($value);
 }
+
+// var_dump($record['post_text']);
+// exit();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,7 +38,14 @@ if ($status == false) {
 </head>
 <body>
     <main>
-    
+        <!-- コメントされる側のの投稿 -->
+        <div>
+            <!-- デザイン皆無です、お願いします -->
+            <a href="./post_read.php">一覧に戻る</a>
+            <p><?=$record['post_text']?></p>
+            <img src=<?=$record['post_image']?>>
+            <p><?=$record['post_created_at']?></p>
+        </div>
     </main>
 </body>
 </html>
