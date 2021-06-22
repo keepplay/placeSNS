@@ -23,7 +23,8 @@ if ($status == false) {
     // サイズは調整してください
     $output .= "<img src='{$record["post_image"]}'>";
     $output .= "<p>{$record["post_created_at"]}</p>";
-    $output .= "<a href='post_delete.php?post_id={$record["post_id"]}'>delete</a>";
+    $output .= "<p><a href='post_delete.php?post_id={$record["post_id"]}'>delete</a></p>";
+    $output .= "<p><a href='post_show.php?post_id={$record["post_id"]}'>投稿詳細</a></p>";
     $output .= "</div>";
   }
   unset($value);
