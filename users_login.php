@@ -20,7 +20,7 @@
     </div>
 
 
-      <h1>Stillartにログイン</h1>
+    <h1>Stillartにログイン</h1>
 
 
     <!-- ログイン -->
@@ -47,9 +47,7 @@
       <p class="newperson_text">アカウントをお持ちでない方はこちら</p>
       <button class="action_btn" id="new_btn" onclick="loction.href='todo_register.php'">新規会員登録</a>
     </div>
-
-
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="kasho.js"></script>
 </body>
 
