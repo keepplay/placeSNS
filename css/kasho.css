@@ -257,7 +257,6 @@ input:focus {
 
 
 .firstbox {
-  border-bottom: 1px solid #B1BDCE;
   display: flex;
   justify-content: center;
   align-items: center;
