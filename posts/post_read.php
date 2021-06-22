@@ -5,6 +5,7 @@ session_start();
 
 $pdo = connect_to_db();
 
+
 $sql = 'SELECT * FROM posts_table';
 
 $stmt = $pdo->prepare($sql);
@@ -55,27 +56,28 @@ if ($status == false) {
 </head>
 
 <body>
+
+
+  <header class="site_header">
+    <p class="site_logo">stillart</p>
+    <nav class="gnav">
+      <ul class="gnav__menu">
+
+        <li class="gnav__menu__item"><a href="post_input.php"><span class="material-icons">
+              edit
+            </span></li>
+
+        <li class="gnav__menu__item"><a href="post_logout.php"><span class="material-icons">
+              logout
+            </span></a></li>
+
+      </ul>
+    </nav>
+  </header>
   <div class="warapper">
 
-    <header class="site_header">
-      <p class="site_logo">stillart</p>
-      <nav class="gnav">
-        <ul class="gnav__menu">
-
-          <li class="gnav__menu__item"><a href="post_input.php"><span class="material-icons">
-                edit
-              </span></li>
-
-          <li class="gnav__menu__item"><a href="post_logout.php"><span class="material-icons">
-                logout
-              </span></a></li>
-
-        </ul>
-      </nav>
-    </header>
-    <div>
-      <div class="post_area">
-        <!-- ここに
+    <div class="post_area">
+      <!-- ここに
                   <div>
                     <p>投稿内容</p>
                     <img src="画像">
@@ -83,10 +85,12 @@ if ($status == false) {
                     <a href="削除へ">
                   </div>
                   の形でデータが入る -->
-        <?= $output ?>
-      </div>
+      <?= $output ?>
     </div>
+
   </div>
+
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="../kasho.js"></script>
 </body>
