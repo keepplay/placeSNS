@@ -20,7 +20,7 @@ if ($status == false) {
   $output = "";
   foreach ($result as $record) {
     $output .= "<div class='post_card'>";
-    $output .= "<p>{$record["post_text"]}</p>";
+    $output .= "<div class='post_text'><p>{$record["post_text"]}</p></div>";
     // サイズは調整してください
 
     if (isset($record["post_image"])) {
@@ -28,8 +28,8 @@ if ($status == false) {
     }
 
     $output .= "<div class='post_icon_area'>";
-    $output .= "<p class='post_icon'><a href='post_delete.php?post_id={$record["post_id"]}'><span class='material-icons'>
-    delete</span></a></p>";
+    // $output .= "<p class='post_icon'><a href='post_delete.php?post_id={$record["post_id"]}'><span class='material-icons'>
+    // delete</span></a></p>";
     $output .= "<p class='post_icon'><a href='post_show.php?post_id={$record["post_id"]}'><span class='material-icons'>
     chat</span>
     </a></p>";
@@ -59,7 +59,9 @@ if ($status == false) {
 
 
   <header class="site_header">
-    <p class="site_logo">stillart</p>
+    <div class="icon">
+      <img src="../image/icon.png">
+    </div>
     <nav class="gnav">
       <ul class="gnav__menu">
 
@@ -67,9 +69,9 @@ if ($status == false) {
               edit
             </span></li>
 
-        <li class="gnav__menu__item"><a href="post_logout.php"><span class="material-icons">
+        <!-- <li class="gnav__menu__item"><a href="post_logout.php"><span class="material-icons">
               logout
-            </span></a></li>
+            </span></a></li> -->
 
       </ul>
     </nav>
@@ -84,7 +86,7 @@ if ($status == false) {
                     <p>投稿時間
                     <a href="削除へ">
                   </div>
-                  の形でデータが入る -->
+      の形でデータが入る -->
       <?= $output ?>
     </div>
 
