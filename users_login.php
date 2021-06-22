@@ -15,16 +15,13 @@
 
   <section class="form_parent">
 
-    <div>
-      <img src="./image/rogo.jpg" width="100" height="100">
+    <div class="rogo">
+      <img src="./image/rogo.png">
     </div>
 
-    <!-- 新規会員登録 -->
 
-    <div class="firstbox">
-      <p class="newperson_text">アカウントをお持ちでない方はこちら</p>
-      <button class="action_btn" id="new_btn" onclick="loction.href='todo_register.php'">新規会員登録</a>
-    </div>
+      <h1>Stillartにログイン</h1>
+
 
     <!-- ログイン -->
     <form class="form" action="./users_login_act.php" method="post">
@@ -43,6 +40,15 @@
       </div>
 
     </form>
+
+    <!-- 新規会員登録 -->
+
+    <div class="firstbox">
+      <p class="newperson_text">アカウントをお持ちでない方はこちら</p>
+      <button class="action_btn" id="new_btn" onclick="loction.href='todo_register.php'">新規会員登録</a>
+    </div>
+
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
     <script src="kasho.js"></script>
 </body>
