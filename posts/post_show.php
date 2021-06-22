@@ -26,7 +26,7 @@ if ($status == false) {
 }
 
 
-$sql_comment = 'SELECT * FROM comment_table WHERE post_id=:post_id';
+$sql_comment = 'SELECT * FROM comment_table WHERE post_id=:post_id ';
 
 
 $stmt_comment = $pdo->prepare($sql_comment);
