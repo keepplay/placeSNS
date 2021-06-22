@@ -41,7 +41,9 @@ session_start();
   <div class="warapper">
 
     <header class="site_header">
-      <p class="site_logo">stillart</p>
+      <div class="site_logo">
+        <img src="../image/rogo.png" >
+      </div>
       <nav class="gnav">
         <ul class="gnav__menu">
 
