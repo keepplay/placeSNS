@@ -104,11 +104,11 @@ a {
   color: inherit;
 }
 
-img {
+/* img {
   width: 100%;
   height: auto;
   vertical-align: bottom;
-}
+} */
 
 input,
 button {
@@ -225,23 +225,16 @@ input::placeholder {
 
 
 /* ヘッダー */
-header {
-  /* position: fixed; */
-  width: 100%;
-  height: 60px;
-}
 
-.site_header {
+
+.site_header{
+  padding: 10px;
   display: flex;
-  padding: 60px 20px;
-  justify-content: space-between;
-  width: 100%;
+  justify-content: center;
 }
 
-.site_logo {
-  width: 60px;
-  font-size: 36px;
-  font-weight: bold;
+.icon{
+  width: 10%;
 }
 
 .gnav__menu {
@@ -249,13 +242,12 @@ header {
 }
 
 .gnav__menu__item {
-  margin-left: 20px;
-  width: 50px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   background: linear-gradient(134.17deg, #EEF0F5 4.98%, #E6E9EF 94.88%);
   box-shadow: -12px -12px 20px rgba(255, 255, 255, 0.8),
     10px 10px 20px rgba(166, 180, 200, 0.7);
-  border-radius: 4px;
+  border-radius: 50%;
   text-align: center;
 
 }
