@@ -29,19 +29,24 @@ if (isset($_FILES['post_image']) && $_FILES['post_image']['error'] == 0) {
   $extension = pathinfo($uploaded_file_name, PATHINFO_EXTENSION);
   $unique_name = date('YmdHis') . md5(session_id()) . "." . $extension;
   $filename_to_save = $directory_path . $unique_name;
+
+
   if (is_uploaded_file($temp_path)) {
     // ここでtmpファイルを移動する
     if (move_uploaded_file($temp_path, $filename_to_save)) {
       chmod($filename_to_save, 0644);
     } else {
-      exit('Error:アップロードできませんでした');
+      // 画像なしでも投稿できる仕様のため
+      // exit('Error:アップロードできませんでした');
     }
   } else {
-    exit('Error：画像がありません');
+    // 画像なしでも投稿できる仕様のため
+    // exit('Error：画像がありません');
   }
 } else {
+  // 画像なしでも投稿できる仕様のため
   // 送信時エラー
-  exit('Error:画像が送信されていません');
+  // exit('Error:画像が送信されていません');
 }
 
 
