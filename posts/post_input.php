@@ -40,30 +40,32 @@ session_start();
 <body>
 
   <div class="warapper">
-    <header class="site_header">
-      <div class="site_logo">
-        <img src="../image/rogo.png">
+    <div class="header">
+      <div class="gnav__menu__item"><a href="post_read.php">
+          <span class="material-icons">chevron_left</span>
       </div>
-      <nav class="gnav">
-        <ul class="gnav__menu">
+      <img class="icon" src="../image/icon.png">
+    </div>
+    <!-- <nav class="gnav">
+        <ul class="gnav__menu"> -->
 
-          <li class="gnav__menu__item"><a href="post_read.php"><span class="material-icons">
+    <!-- <li class="gnav__menu__item"><a href="post_read.php"><span class="material-icons">
                 home
-              </span></li>
+              </span></li> -->
 
-          <li class="gnav__menu__item"><a href="post_logout.php"><span class="material-icons">
+    <!-- <li class="gnav__menu__item"><a href="post_logout.php"><span class="material-icons">
                 logout
-              </span></a></li>
+              </span></a></li> -->
+    <!-- 
+      </ul>
+      </nav> -->
 
-        </ul>
-      </nav>
-    </header>
 
     <div class="form_parent">
       <form action="post_create.php" method="POST" enctype="multipart/form-data">
 
         <div class="post_text">
-          なんとなく書く<textarea class="text_area" rows="10" cols="50" name="post_text" placeholder="テキストを入力" autofocus></textarea>
+          G's Academy<textarea class="text_area" rows="10" cols="50" name="post_text" placeholder="テキストを入力" autofocus></textarea>
         </div>
 
         <div class="post_img">
