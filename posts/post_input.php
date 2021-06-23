@@ -70,7 +70,9 @@ session_start();
 
         <div class="post_img">
           <label for="file" class="file_btn_text">
-            <div class="file_btn"><span>写真を添付<span>
+            <div class="file_btn"><span><i class="material-icons" id="add_photo">
+                  add_photo_alternate
+                </i>写真を添付<span>
             </div>
           </label>
           <input type="file" id="file" class="fileinput" name="post_image" accept="image/*" capture="camera">
@@ -87,7 +89,8 @@ session_start();
 
 
         <div class="submit_btn">
-          <button>書き残す</button>
+          <button><i class="material-icons" id="push_pin">
+              push_pin</i>書き残す</button>
         </div>
 
     </div>
@@ -105,8 +108,7 @@ session_start();
   </section> -->
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!-- <script src="../kasho.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <script src='https://www.bing.com/api/maps/mapcontrol?key=AjFcJuWxXYNwMC0PS8_ZQb8m92xQad3BpO3K9s7XJVoAoGuHv0eQIe4Vr5wIjQaN' async defer></script>
     <!-- 位置情報を取得するJS -->

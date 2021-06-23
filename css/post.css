@@ -326,9 +326,13 @@ input::placeholder {
   flex-direction: column;
 }
 
+#preview {
+
+  margin: 24px 0 0;
+}
+
 #preview img {
   width: 200px;
-  margin: 10px;
   border: solid 1px silver;
 }
 
@@ -370,6 +374,10 @@ input::placeholder {
   font-size: 14px;
 }
 
+#add_photo {
+  margin-right: 8px;
+}
+
 /* 送信ボタン */
 .submit_btn {
   margin-top: 72px;
@@ -377,4 +385,8 @@ input::placeholder {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+#push_pin {
+  margin-right: 8px;
 }
