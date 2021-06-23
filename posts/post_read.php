@@ -145,21 +145,21 @@ if ($status == false) {
         if (post_data[i].post_lat == lat && post_data[i].post_lng == lng) {
           output += "<div class='post_card'>";
 
-          output += "<div class='post_text'>";
-          output += "<p>" + post_data[i].post_text + "</p>";
-          output += "</div>"
+          output += "<img class='post_img'  width='500' height='500'alt='' src=" + post_data[i].post_image + ">";
 
           if (post_data[i].post_image != null) {
-            output += "<img class='post_img'  width='500' height='500'alt='' src=" + post_data[i].post_image + ">";
+            output += "<div class='post_text'>";
+            output += "<p>" + post_data[i].post_text + "</p>";
+            output += "</div>";
           }
 
           output += "<div class='post_icon_area'>";
-          output += "<p class='post_time'>" + post_data[i].post_created_at + "</p>";
           output += "<p class='post_icon'>";
           output += "<a href='post_show.php?post_id=" + post_data[i].post_id + "'>";
           output += "<span class='material-icons'>chat</span>";
           output += "</a>";
           output += "</p>";
+          output += "<p class='post_time'>" + post_data[i].post_created_at + "</p>";
 
           output += "</div>";
           output += "</div>";
