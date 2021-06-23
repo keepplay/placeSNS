@@ -1,0 +1,336 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.icon img {
+  width: 10%;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+
+
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+
+}
+
+body {
+  line-height: 1.8;
+  line-height: 2;
+  font-size: 15px;
+  color: var(--color_black);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+input,
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+}
+
+/* フォーム */
+input,
+select,
+textarea,
+button {
+  font-family: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  outline: none;
+
+}
+
+/* ここまで リセット*/
+
+/* ここから共通CSS */
+
+/* 色の変数 */
+:root {
+  --color_white: #fff;
+  --color_black: #333;
+  --color_blue: #00d7ee;
+  --color_blue_light: #d0fdff;
+  --color_orange: #ffaf3f;
+  --color_orange_hover: #ff8539;
+  --color_gray: #686868;
+}
+
+body {
+  font-family: "Segoe UI",
+    Meiryo,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  background: linear-gradient(118.47deg, #E9EDF0 0.61%, #E9EDF0 100%);
+  margin-top: 0;
+}
+
+.warapper {
+  width: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  padding: 32px 0;
+}
+
+
+
+.form_parent {
+  width: 360px;
+  margin: 64px auto;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+
+
+/* 投稿 */
+
+.text_area {
+  width: 260px;
+  padding: 10px 16px 8px;
+  background: linear-gradient(134.17deg, #EEF1F5 4.98%, #E6E9EF 94.88%);
+  box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.75),
+    inset 5px 5px 10px rgba(166, 180, 200, 0.75);
+  border-radius: 4px;
+  font-size: 16px;
+
+
+}
+
+.text_area:focus {
+  border-color: var(--color_blue_light);
+}
+
+.posted_card {
+  background: linear-gradient(134.17deg, #EEF0F5 4.98%, #E6E9EF 94.88%);
+  box-shadow: -18.1166px -18.1166px 30.1944px rgba(255, 255, 255, 0.8),
+    15.0972px 15.0972px 36.2333px rgba(166, 180, 200, 0.7);
+  border-radius: 4px;
+  border: solid 1px rgba(159, 175, 180, 0.103);
+  width: 300px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; */
+}
+
+.posted_text {
+  padding: 16px;
+}
+
+.posted_time {
+  padding: 16px;
+  font-size: 12px;
+  color: var(--color_gray);
+}
+
+.posted_img {
+  padding: 16px;
+  width: 150px;
+  height: auto;
+}
+
+
+
+
+/* コメント入力 */
+.comment_input_area {
+  width: 300px;
+  margin: 36px 0 0;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.comment_text_area {
+  width: 300px;
+  padding: 10px 16px 8px;
+  background: linear-gradient(134.17deg, #EEF1F5 4.98%, #E6E9EF 94.88%);
+  box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.75),
+    inset 5px 5px 10px rgba(166, 180, 200, 0.75);
+  border-radius: 4px;
+  font-size: 16px;
+  resize: none;
+
+
+}
+
+.comment_text_area:focus {
+  border-color: var(--color_blue_light);
+  background: var(--color_blue_light);
+}
+
+.comment_btn {
+  width: 260px;
+  height: 40px;
+  background: linear-gradient(134.17deg, #EEF0F5 4.98%, #E6E9EF 94.88%);
+  box-shadow: -12px -12px 20px rgba(255, 255, 255, 0.8),
+    10px 10px 20px rgba(166, 180, 200, 0.7);
+  border-radius: 4px;
+  font-size: 14px;
+  margin: 24px 0 0;
+
+
+}
+
+.comment_btn:hover {
+  background: var(--color_blue_light);
+
+}
+
+.comment_btn:active {
+  background: var(--color_blue_light);
+  box-shadow: inset 11px 11px 22px #d6dadd,
+    inset -11px -11px 22px #fcffff;
+}
+
+
+/* コメント表示エリア */
+.comment_area {
+  margin: 36px 0 0;
+
+
+}
+
+.post_icon {
+  color: var(--color_gray);
+}
+
+.post_icon:hover {
+  color: var(--color_blue);
+}
+
+.comment_card {
+  background: linear-gradient(134.17deg, #EEF0F5 4.98%, #E6E9EF 94.88%);
+  box-shadow: -18.1166px -18.1166px 30.1944px rgba(255, 255, 255, 0.8),
+    15.0972px 15.0972px 36.2333px rgba(166, 180, 200, 0.7);
+  border-radius: 4px;
+  border: solid 1px rgba(159, 175, 180, 0.103);
+  width: 300px;
+
+}
+
+/* 最初のコメント以外 余白*/
+.comment_card:not(:first-of-type) {
+  margin: 24px 0 0;
+}
+
+.comment_text {
+  padding: 16px;
+}
+
+.comment_footer {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 16px;
+
+}
