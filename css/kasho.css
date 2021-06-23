@@ -244,11 +244,8 @@ input::placeholder {
   height: 48px;
   color: #757575;
 }
-
 input:focus {
-  border-color: var(--color_blue_light);
-
-
+  background: var(--color_blue_light);
 }
 
 

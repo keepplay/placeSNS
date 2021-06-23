@@ -41,19 +41,19 @@ if ($status_comment == false) {
     $result = $stmt_comment->fetchAll(PDO::FETCH_ASSOC);
     $output = "";
     foreach ($result as $record_comment) {
-    $output .= "<div class='post_card'>";
-    $output .= "<p>{$record_comment["comment_text"]}</p>";
-    $output .= "<div class='post_icon_area'>";
-    $output .= "<p class='post_icon'>
+        $output .= "<div class='comment_card'>";
+        $output .= "<p class='comment_text'>{$record_comment["comment_text"]}</p>";
+        $output .= "<div class='comment_footer'>";
+        $output .= "<p class='post_time'>{$record_comment["comment_created_at"]}</p>";
+        $output .= "<p class='post_icon'>
                 <a href='./post_comment__delete.php?id={$record_comment["id"]}&post_id={$post_id}'>
                 <span class='material-icons'>
                 delete</span></a></p>";
-    $output .= "</div>";
+        $output .= "</div>";
 
-    $output .= "<p class='post_time'>{$record_comment["comment_created_at"]}</p>";
-    $output .= "</div>";
+        $output .= "</div>";
 
-    unset($value);
+        unset($value);
     }
 }
 
@@ -62,33 +62,50 @@ if ($status_comment == false) {
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>投稿詳細</title>
-    </head>
-    <body>
-        <main>
-            <div>
-                <!-- とりあえず一番上に作りました -->
-                コメント入力のとこ
-                <form action="./post_comment_create.php" method="post">
-                    <input type="text" name="comment_text">
-                    <input type="hidden" name="post_id" value=<?=$post_id?>>
-                    <input type="submit" >
-                </form>
-            </div>
-            <!-- コメントされる側のの投稿 -->
-            <div>
-                <!-- デザイン皆無です、お願いします -->
-                <a href="./post_read.php">一覧に戻る</a>
-                <p><?=$record['post_text']?></p>
-                <img src=<?=$record['post_image']?>>
-                <p><?=$record['post_created_at']?></p>
-            </div>
-            <!-- コメント表示 -->
-            <?= $output?>
-        </main>
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- マテリアルアイコン -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../css/comment.css">
+
+    <title>コメント投稿</title>
+</head>
+
+<body>
+    <div class="warapper">
+
+        <!-- コメントされる側の投稿 -->
+        <div class="posted_card">
+            <!-- デザイン皆無です、お願いします -->
+            <p class="posted_text"><?= $record['post_text'] ?></p>
+            <p class="posted_img">
+                <img src=<?= $record['post_image'] ?>>
+            </p>
+            <p class="posted_time"><?= $record['post_created_at'] ?></p>
+        </div>
+
+
+        <!-- コメント入力 -->
+        <div class="comment_input_area">
+            <form action="./post_comment_create.php" method="post">
+                <textarea class="comment_text_area" rows="5" cols="50" name="comment_text" placeholder="コメントを入力" autofocus></textarea>
+                <input type="hidden" name="post_id" value=<?= $post_id ?>>
+                <input class="comment_btn" type="submit">
+
+            </form>
+        </div>
+
+        <!-- コメント表示 -->
+        <div class="comment_area">
+            <?= $output ?>
+        </div>
+        <a href="./post_read.php">一覧に戻る</a>
+    </div>
+
+</body>
+
+
 </html>
