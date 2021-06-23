@@ -77,6 +77,23 @@ if ($status_comment == false) {
 <body>
     <div class="warapper">
 
+        <div class="header">
+
+            <div class="left_header">
+                <div class="gnav__menu__item"><a href="post_read.php"></a>
+                    <span class="material-icons">chevron_left</span>
+                </div>
+            </div>
+
+            <div class="right_header">
+                <div>
+                    <img class="icon" src="../image/icon.png">
+                </div>
+            </div>
+
+        </div>
+
+
         <!-- コメントされる側の投稿 -->
         <div class="posted_card">
             <!-- デザイン皆無です、お願いします -->
@@ -91,7 +108,7 @@ if ($status_comment == false) {
         <!-- コメント入力 -->
         <div class="comment_input_area">
             <form action="./post_comment_create.php" method="post">
-                <textarea class="comment_text_area" rows="5" cols="50" name="comment_text" placeholder="コメントを入力" autofocus></textarea>
+                <textarea class="comment_text_area" rows="5" cols="50" name="comment_text" placeholder="コメントを入力" autofocus required></textarea>
                 <input type="hidden" name="post_id" value=<?= $post_id ?>>
                 <input class="comment_btn" type="submit">
 
@@ -102,10 +119,6 @@ if ($status_comment == false) {
         <div class="comment_area">
             <?= $output ?>
         </div>
-
-        <button class="home_button" onclick="location.href='post_read.php'">
-            <i class="material-icons">home</i>
-        </button>
 
 
     </div>
