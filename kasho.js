@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
   /* 各フォームからフォーカスアウトしたときに実行 */
   $(":text,textarea,:password,#email").blur(function () {
@@ -30,16 +29,16 @@ $(document).ready(function () {
       }
     }
 
-    if($(this).attr('validate').match("mailadd")){
-  if(!$(this).val().match(/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/g)){
-    if($(this).next().text() === ""){
-      $(this).after("<div class='vErrorMsg'>メールアドレスの形式で入力してください</div>");
+    if ($(this).attr('validate').match("mailadd")) {
+      if (!$(this).val().match(/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/g)) {
+        if ($(this).next().text() === "") {
+          $(this).after("<div class='vErrorMsg'>メールアドレスの形式で入力してください</div>");
+        }
+        return true;
+      } else {
+        if ($(this).next().text() !== "") $(this).next().remove();
+      }
     }
-    return true;
-  }else{
-    if($(this).next().text() !== "") $(this).next().remove();
-  }
-}
 
 
 
@@ -144,16 +143,16 @@ $(document).ready(function () {
       }
     }
 
-    if($(this).attr('validate').match("mailadd")){
-  if(!$(this).val().match(/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/g)){
-    if($(this).next().text() === ""){
-      $(this).after("<div class='vErrorMsg'>メールアドレスの形式で入力してください</div>");
+    if ($(this).attr('validate').match("mailadd")) {
+      if (!$(this).val().match(/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/g)) {
+        if ($(this).next().text() === "") {
+          $(this).after("<div class='vErrorMsg'>メールアドレスの形式で入力してください</div>");
+        }
+        return true;
+      } else {
+        if ($(this).next().text() !== "") $(this).next().remove();
+      }
     }
-    return true;
-  }else{
-    if($(this).next().text() !== "") $(this).next().remove();
-  }
-}
 
 
 
@@ -209,3 +208,16 @@ function previewFile(file) {
   // いざファイルをURLとして読み込む
   reader.readAsDataURL(file);
 }
+
+// // 一覧ページ
+// let p_props = {
+//   "color": "red",
+//   "display": "flex",
+//   "justifyContent": "center",
+//   "alignItems": "center",
+//   "flexDirection": "column",
+//   "margin": "auto"
+
+// }
+
+// $(".post_area").css(p_props);
