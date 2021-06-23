@@ -28,6 +28,7 @@ td {
   border: none;
 }
 
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -162,20 +163,13 @@ body {
 
 .warapper {
   width: 360px;
-}
-
-
-
-.form_parent {
-  width: 360px;
-  margin: 64px auto;
-}
-
-.form {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: auto;
+  padding: 64px 0;
+
 }
 
 
@@ -187,13 +181,10 @@ button {
     10px 10px 20px rgba(166, 180, 200, 0.7);
   border-radius: 4px;
   font-size: 14px;
-
-
 }
 
 button:hover {
   background: var(--color_blue_light);
-
 }
 
 button:active {
@@ -215,23 +206,12 @@ button:active {
 
 }
 
-/*
-input::placeholder {
-  font-family: Noto Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 19px;
-  letter-spacing: 0.05em;
-  color: #757575;
-} */
-
 .text_area:focus {
   border-color: var(--color_blue_light);
 }
 
 
-/* ヘッダー */
+/* ヘッダー
 header {
   background: linear-gradient(134.17deg, #EEF0F5 4.98%, #E6E9EF 94.88%);
   box-shadow: -12px -12px 20px rgba(255, 255, 255, 0.8),
@@ -240,24 +220,19 @@ header {
   height: 60px;
   position: fixed;
   display: block;
-
 }
-
 .site_header {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-
 .icon {
   padding: 11px;
 }
-
 .gnav__menu {
   display: flex;
   padding: 8px;
 }
-
 .gnav__menu__item {
   margin-left: 20px;
   width: 40px;
@@ -266,9 +241,9 @@ header {
   box-shadow: -12px -12px 20px rgba(255, 255, 255, 0.8),
     10px 10px 20px rgba(166, 180, 200, 0.7);
   /* border: solid 1px rgba(159, 175, 180, 0.103); */
-  border-radius: 50%;
-  text-align: center;
-}
+/* border-radius: 50%; */
+/* text-align: center; */
+/* }
 
 .gnav__menu__item:hover {
   background: var(--color_blue_light);
@@ -288,15 +263,16 @@ header {
 .gnav__menu__item a {
   color: #333;
   text-decoration: none;
-}
-
+} */
+*/
 
 /* 投稿 */
 .post_area {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: columnimg;
+  flex-direction: column;
+  margin: auto;
 }
 
 .post_card {
@@ -304,30 +280,36 @@ header {
   box-shadow: -18.1166px -18.1166px 30.1944px rgba(255, 255, 255, 0.8),
     15.0972px 15.0972px 36.2333px rgba(166, 180, 200, 0.7);
   border-radius: 30px;
-  /* border: solid 1px rgba(159, 175, 180, 0.103); */
   width: 300px;
   height: 300px;
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; */
+  margin: auto;
+
+  /* border: solid 1px rgba(159, 175, 180, 0.103); */
 }
 
 /* 最初の投稿以外 余白*/
 .post_card:not(:first-of-type) {
-  margin: 24px 0 0;
+  margin: 36px 0 0;
 }
 
-.post_text{
-  padding: 40px;
+.post_text {
+  padding: 16px;
 }
 
 .post_img {
+  padding: 16px;
+
   width: 100px;
   height: 100px;
 }
 
 .post_time {
+  padding: 16px;
+
   font-size: 12px;
   color: #686868;
+}
+
+.post_icon_area {
+  display: flex;
 }

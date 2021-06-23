@@ -56,7 +56,7 @@ if ($status == false) {
 </head>
 
 <body>
-
+  <!--
 
   <header class="site_header">
     <div class="icon">
@@ -69,17 +69,23 @@ if ($status == false) {
               edit
             </span></li>
 
-        <!-- <li class="gnav__menu__item"><a href="post_logout.php"><span class="material-icons">
+         <li class="gnav__menu__item"><a href="post_logout.php"><span class="material-icons">
               logout
-            </span></a></li> -->
+            </span></a></li>
 
-      </ul>
-    </nav>
+  </ul>
+  </nav>
   </header>
+
+  -->
+
+
   <div class="warapper">
 
     <div class="post_area">
-      <!-- ここに
+    </div>
+
+    <!-- ここに
                   <div>
                     <p>投稿内容</p>
                     <img src="画像">
@@ -87,9 +93,10 @@ if ($status == false) {
                     <a href="削除へ">
                   </div>
       の形でデータが入る -->
-      <!-- <?= $output ?> -->
-      <div id="output"></div>
-    </div>
+    <!-- <?= $output ?> -->
+
+
+
 
   </div>
   <script>
@@ -97,76 +104,79 @@ if ($status == false) {
     let map;
 
     const option = {
-        enableHighAccuracy: true,
-        maximumAge: 20000,
-        timeout: 1000000,
+      enableHighAccuracy: true,
+      maximumAge: 20000,
+      timeout: 1000000,
     };
 
     // エラーがでた時の処理
     function showError(error) {
-        let e = '';
-        if (error.code == 1) {
+      let e = '';
+      if (error.code == 1) {
         e = '位置情報が許可されてません';
-        } else if (error.code == 2) {
-            e = '現在位置を特定できません';
-        }else if (error.code == 3) {
+      } else if (error.code == 2) {
+        e = '現在位置を特定できません';
+      } else if (error.code == 3) {
         e = '位置情報を取得する前にタイムアウトになりました';
-        }
-        alert('error:' + e);
+      }
+      alert('error:' + e);
     }
 
     // 地図の表示の関数を定義
     function mapsInit(position) {
-        const lat = position.coords.latitude.toFixed(4);
-        const lng = position.coords.longitude.toFixed(4);
-        // map = new Microsoft.Maps.Map('#map', {
-        // center: {
-        //     latitude: lat,
-        //     longitude: lng
-        // },
-        // zoom: 20,
-        // });
-        console.log(position);
-        console.log(lat, lng);
-        $("#post_lat").val(lat);
-        $("#post_lng").val(lng);
+      const lat = position.coords.latitude.toFixed(4);
+      const lng = position.coords.longitude.toFixed(4);
+      // map = new Microsoft.Maps.Map('#map', {
+      // center: {
+      //     latitude: lat,
+      //     longitude: lng
+      // },
+      // zoom: 20,
+      // });
+      console.log(position);
+      console.log(lat, lng);
+      $("#post_lat").val(lat);
+      $("#post_lng").val(lng);
 
-        const post_data = <?= json_encode($result) ?>;
-        let output = "";
-        for(let i = 1; i < post_data.length; i ++){
-          // 現在地と同じ位置情報の投稿を表示
-          if(post_data[i].post_lat == lat &&post_data[i].post_lng == lng){
-                  output +="<div class='post_card'>";
-                  output +="<div class='post_text'>" ;
-                  output +="<p>" + post_data[i].post_text +"</p>";
-                  output +="</div>"
-                    if (post_data[i].post_image != null) {
-                      output += "<img class='post_img'  width='500' height='500'alt='' src='"
-                      output += post_data[i].post_image + ">";
-                    }
-                  output += "<div class='post_icon_area'>";
-                  output += "<p class='post_icon'>";
-                  output += "<a href='post_show.php?post_id="+ post_data[i].post_id +"'>";
-                  output += "<span class='material-icons'>chat</span>";
-                  output += "</a>";
-                  output += "</p>";
-                  output += "</div>";
-                  output += "<p class='post_time'>"+post_data[i].post_created_at+"</p>";
-                  output += "</div>";
+      const post_data = <?= json_encode($result) ?>;
+      let output = "";
+      for (let i = 1; i < post_data.length; i++) {
+        // 現在地と同じ位置情報の投稿を表示
+        if (post_data[i].post_lat == lat && post_data[i].post_lng == lng) {
+          output += "<div class='post_card'>";
+
+          output += "<div class='post_text'>";
+          output += "<p>" + post_data[i].post_text + "</p>";
+          output += "</div>"
+
+          if (post_data[i].post_image != null) {
+            output += "<img class='post_img'  width='500' height='500'alt='' src=" + post_data[i].post_image + ">";
           }
-          // console.log(post_data[i].post_lat);
-          // console.log(post_data[i].post_lng);
+
+          output += "<div class='post_icon_area'>";
+          output += "<p class='post_time'>" + post_data[i].post_created_at + "</p>";
+          output += "<p class='post_icon'>";
+          output += "<a href='post_show.php?post_id=" + post_data[i].post_id + "'>";
+          output += "<span class='material-icons'>chat</span>";
+          output += "</a>";
+          output += "</p>";
+
+          output += "</div>";
+          output += "</div>";
         }
-          $('#output').html(output);
+        // console.log(post_data[i].post_lat);
+        // console.log(post_data[i].post_lng);
       }
-        // console.log("現在地"+lat);
-        // console.log("現在地"+lng);
-      // console.log(post_data);
+      $('.post_area').html(output);
+    }
+    // console.log("現在地"+lat);
+    // console.log("現在地"+lng);
+    // console.log(post_data);
 
 
     // 位置情報の取得
     function getPosition() {
-        navigator.geolocation
+      navigator.geolocation
         .getCurrentPosition(mapsInit, showError, option);
       // .watchPosition(mapsInit, showError, option);
     }
@@ -174,7 +184,7 @@ if ($status == false) {
     // jsファイルの読み込みが終わってから処理を開始。
     // 実際に実行しているのはここ！
     window.onload = function() {
-        getPosition();
+      getPosition();
     }
   </script>
 
