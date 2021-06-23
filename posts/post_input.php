@@ -48,14 +48,16 @@ session_start();
   <div class="warapper">
 
     <div class="header">
-      
+
       <div class="left_header">
         <div class="gnav__menu__item"><a href="post_read.php"></a>
-            <span class="material-icons">chevron_left</span>
+          <span class="material-icons">chevron_left</span>
         </div>
       </div>
       <div class="right_header">
-        <img class="icon" src="../image/icon.png">
+        <div>
+          <img class="icon" src="../image/icon.png">
+        </div>
       </div>
 
     </div>
@@ -94,7 +96,8 @@ session_start();
 
     <!-- あとで追加します。by hashi -->
     <div>
-      post_place: <input type="hidden" name="post_place">
+      <!-- post_place:  -->
+      <input type="hidden" name="post_place">
     </div>
 
     </form>
