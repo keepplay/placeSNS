@@ -1,6 +1,6 @@
 <?php
 // var_dump($_POST);
-// exit();
+
 // var_dump($_FILES);
 // exit();
 include("../functions.php");
