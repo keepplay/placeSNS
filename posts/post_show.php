@@ -102,7 +102,12 @@ if ($status_comment == false) {
         <div class="comment_area">
             <?= $output ?>
         </div>
-        <a href="./post_read.php">一覧に戻る</a>
+
+        <button class="home_button" onclick="location.href='post_read.php'">
+            <i class="material-icons">home</i>
+        </button>
+
+
     </div>
 
 </body>

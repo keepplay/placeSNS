@@ -170,24 +170,6 @@ body {
   padding: 32px 0;
 }
 
-
-
-.form_parent {
-  width: 360px;
-  margin: 64px auto;
-}
-
-.form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-
-
-
-
 /* 投稿 */
 
 .text_area {
@@ -198,7 +180,6 @@ body {
     inset 5px 5px 10px rgba(166, 180, 200, 0.75);
   border-radius: 4px;
   font-size: 16px;
-
 
 }
 
@@ -211,7 +192,7 @@ body {
   box-shadow: -18.1166px -18.1166px 30.1944px rgba(255, 255, 255, 0.8),
     15.0972px 15.0972px 36.2333px rgba(166, 180, 200, 0.7);
   border-radius: 4px;
-  border: solid 1px rgba(159, 175, 180, 0.103);
+  /* border: solid 1px rgba(159, 175, 180, 0.103); */
   width: 300px;
   /* display: flex;
   justify-content: center;
@@ -235,13 +216,10 @@ body {
   height: auto;
 }
 
-
-
-
 /* コメント入力 */
 .comment_input_area {
   width: 300px;
-  margin: 36px 0 0;
+  margin: 128px 0 0;
   text-align: center;
 
   display: flex;
@@ -260,7 +238,6 @@ body {
   font-size: 16px;
   resize: none;
 
-
 }
 
 .comment_text_area:focus {
@@ -276,7 +253,7 @@ body {
     10px 10px 20px rgba(166, 180, 200, 0.7);
   border-radius: 4px;
   font-size: 14px;
-  margin: 24px 0 0;
+  margin: 36px 0 0;
 
 
 }
@@ -295,7 +272,7 @@ body {
 
 /* コメント表示エリア */
 .comment_area {
-  margin: 36px 0 0;
+  margin: 128px 0 0;
 
 
 }
@@ -313,14 +290,14 @@ body {
   box-shadow: -18.1166px -18.1166px 30.1944px rgba(255, 255, 255, 0.8),
     15.0972px 15.0972px 36.2333px rgba(166, 180, 200, 0.7);
   border-radius: 4px;
-  border: solid 1px rgba(159, 175, 180, 0.103);
+  /* border: solid 1px rgba(213, 233, 240, 0.103); */
   width: 300px;
 
 }
 
 /* 最初のコメント以外 余白*/
 .comment_card:not(:first-of-type) {
-  margin: 24px 0 0;
+  margin: 36px 0 0;
 }
 
 .comment_text {
@@ -333,4 +310,30 @@ body {
 
   padding: 16px;
 
+}
+
+/* ホームボタン */
+
+.home_button {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(134.17deg, #EEF0F5 4.98%, #E6E9EF 94.88%);
+  box-shadow: -12px -12px 20px rgba(255, 255, 255, 0.8),
+    10px 10px 20px rgba(166, 180, 200, 0.7);
+  border-radius: 4px;
+  font-size: 14px;
+  margin: 128px 0 0;
+
+
+}
+
+.home_button:hover {
+  background: var(--color_blue_light);
+
+}
+
+.home_button:active {
+  background: var(--color_blue_light);
+  box-shadow: inset 11px 11px 22px #d6dadd,
+    inset -11px -11px 22px #fcffff;
 }
