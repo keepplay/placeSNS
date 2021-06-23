@@ -1,9 +1,11 @@
+
 function previewFile(file) {
   // プレビュー画像を追加する要素
   const preview = document.getElementById('preview');
 
   // FileReaderオブジェクトを作成
   const reader = new FileReader();
+
 
   // ファイルが読み込まれたときに実行する
   reader.onload = function (e) {
@@ -27,3 +29,4 @@ const handleFileSelect = () => {
   }
 }
 fileInput.addEventListener('change', handleFileSelect);
+
