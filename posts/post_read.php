@@ -24,7 +24,7 @@ if ($status == false) {
     // サイズは調整してください
 
     if (isset($record["post_image"])) {
-      $output .= "<img class='post_img'  width='100' height='100'alt='' src='{$record["post_image"]}'>";
+      $output .= "<img class='post_img'  width='500' height='500'alt='' src='{$record["post_image"]}'>";
     }
 
     $output .= "<div class='post_icon_area'>";
