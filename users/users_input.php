@@ -25,7 +25,7 @@
           <p class="label">ニックネーム(20文字以内)
 
           </p>
-          <input type="text" class="touroku_input" id="username" name="username" maxlength="20" validate="required blacklist" placeholder="例)くまもとフジオ" required>
+          <input type="text" class="touroku_input" id="username" name="user_name" maxlength="20" validate="required blacklist" placeholder="例)くまもとフジオ" required>
         </div>
 
         <div class="form_group">
@@ -35,7 +35,7 @@
 
         <div class="form_group">
           <p class="label" 　>パスワード</p>
-          <input type="text" class="touroku_input" id="password" name="password" validate="required blacklist alpNumeric" placeholder="8文字以上の半角英数記号" required>
+          <input type="password" class="touroku_input" id="password" name="password" validate="required blacklist alpNumeric" placeholder="8文字以上の半角英数記号" required>
         </div>
 
         <div>
