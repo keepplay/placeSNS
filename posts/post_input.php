@@ -36,29 +36,29 @@ session_start();
 
   </style> -->
 </head>
+<!-- <div class="right_header"></div>
+<div class="gnav__menu__item"><a href="post_read.php">
+    <span class="material-icons">chevron_left</span>
+</div>
+</div>
+<img class="icon" src="../image/icon.png"> -->
 
 <body>
 
   <div class="warapper">
+
     <div class="header">
-      <div class="gnav__menu__item"><a href="post_read.php">
-          <span class="material-icons">chevron_left</span>
+      
+      <div class="left_header">
+        <div class="gnav__menu__item"><a href="post_read.php"></a>
+            <span class="material-icons">chevron_left</span>
+        </div>
       </div>
-      <img class="icon" src="../image/icon.png">
+      <div class="right_header">
+        <img class="icon" src="../image/icon.png">
+      </div>
+
     </div>
-    <!-- <nav class="gnav">
-        <ul class="gnav__menu"> -->
-
-    <!-- <li class="gnav__menu__item"><a href="post_read.php"><span class="material-icons">
-                home
-              </span></li> -->
-
-    <!-- <li class="gnav__menu__item"><a href="post_logout.php"><span class="material-icons">
-                logout
-              </span></a></li> -->
-    <!-- 
-      </ul>
-      </nav> -->
 
 
     <div class="form_parent">
