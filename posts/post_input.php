@@ -93,16 +93,16 @@ session_start();
     </div>
     </form>
 
-    <!-- あとで追加します。by hashi
-    <div>
 
 
 
   </div>
-  <section class="map_area">
+
+
+  <!-- <section class="map_area">
     <p>位置情報取得&Map表示</p>
     <div id="map"></div>
-  </section>
+  </section> -->
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -162,6 +162,7 @@ session_start();
       // 実際に実行しているのはここ！
       window.onload = function() {
         getPosition();
+
       }
     </script>
     <script src="../post_input.js"></script>
