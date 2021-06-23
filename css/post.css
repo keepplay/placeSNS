@@ -227,28 +227,25 @@ input::placeholder {
 /* ヘッダー */
 
 
-.header{
+.header {
   display: flex;
   justify-content: center;
   width: 100%;
   padding: 10px;
+  margin: 24px 0 0;
 }
 
-.left_header{
+.left_header {
   width: 50%;
 }
 
-.right_header{
+.right_header {
   width: 50%;
 }
 
-.icon{
+.icon {
   width: 20%;
   margin-left: 130px;
-}
-
-.gnav__menu {
-  display: flex;
 }
 
 .gnav__menu__item {
@@ -259,14 +256,12 @@ input::placeholder {
     10px 10px 20px rgba(166, 180, 200, 0.7);
   border-radius: 50%;
   text-align: center;
-
+  cursor: pointer;
 }
 
 .gnav__menu__item:hover {
   background: var(--color_blue_light);
-
 }
-
 
 .gnav__menu__item:active {
   background: var(--color_blue_light);
@@ -283,6 +278,8 @@ input::placeholder {
   color: #333;
   text-decoration: none;
 }
+
+/* ここまでへっだー */
 
 
 /* 投稿 */
@@ -329,9 +326,13 @@ input::placeholder {
   flex-direction: column;
 }
 
+#preview {
+
+  margin: 24px 0 0;
+}
+
 #preview img {
   width: 200px;
-  margin: 10px;
   border: solid 1px silver;
 }
 
@@ -373,11 +374,19 @@ input::placeholder {
   font-size: 14px;
 }
 
+#add_photo {
+  margin-right: 8px;
+}
+
 /* 送信ボタン */
 .submit_btn {
-  margin-top: 48px;
+  margin-top: 72px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+#push_pin {
+  margin-right: 8px;
 }
