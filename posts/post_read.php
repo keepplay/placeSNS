@@ -69,7 +69,7 @@ if ($status == false) {
               edit
             </span></li>
 
-         <li class="gnav__menu__item"><a href="post_logout.php"><span class="material-icons">
+        <li class="gnav__menu__item"><a href="post_logout.php"><span class="material-icons">
               logout
             </span></a></li>
 
@@ -145,13 +145,13 @@ if ($status == false) {
         if (post_data[i].post_lat == lat && post_data[i].post_lng == lng) {
           output += "<div class='post_card'>";
 
-          output += "<img class='post_img'  width='500' height='500'alt='' src=" + post_data[i].post_image + ">";
-
+          
           if (post_data[i].post_image != null) {
+            output += "<img class='post_img'  width='500' height='500'alt='' src=" + post_data[i].post_image + ">";
+          }
             output += "<div class='post_text'>";
             output += "<p>" + post_data[i].post_text + "</p>";
             output += "</div>";
-          }
 
           output += "<div class='post_icon_area'>";
           output += "<p class='post_icon'>";
