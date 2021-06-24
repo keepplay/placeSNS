@@ -148,13 +148,16 @@ if ($status == false) {
       $("#post_lng").val(lng);
 
       const post_data = <?= json_encode($result) ?>;
+      console.log(post_data);
       let output = "";
       for (let i = 1; i < post_data.length; i++) {
         // 現在地と同じ位置情報の投稿を表示
         if (post_data[i].post_lat == lat && post_data[i].post_lng == lng) {
           output += "<div class='post_card'>";
-
-
+          console.log(post_data[i].location_name);
+          if (post_data[i].location_name != null) {
+            output += "<p>" + post_data[i].location_name + "</p>";
+          }
           if (post_data[i].post_image != null) {
             output += "<img class='post_img'  width='500' height='500'alt='' src=" + post_data[i].post_image + ">";
           }
