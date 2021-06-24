@@ -105,7 +105,7 @@ a {
 }
 
 img {
-  width: 60%;
+  width: 20%;
   height: auto;
   vertical-align: bottom;
 }
@@ -161,8 +161,8 @@ body {
 }
 
 
-h2 {
-  margin-top: 60px;
+h1 {
+  margin: 60px 0px 36px 0px;
   text-align: center;
   font-size: 19px;
   font-weight: 800;
@@ -211,8 +211,6 @@ button:active {
 }
 
 input {
-
-
   width: 260px;
   height: 48px;
   padding: 10px 16px 8px;
@@ -221,8 +219,6 @@ input {
     inset 5px 5px 10px rgba(166, 180, 200, 0.75);
   border-radius: 4px;
   font-size: 16px;
-
-
 }
 
 input::placeholder {
@@ -240,11 +236,6 @@ input:focus {
   background: var(--color_blue_light);
 }
 
-
-
-/* 個別*/
-
-
 .input_area {
   display: flex;
   justify-content: center;
@@ -253,30 +244,21 @@ input:focus {
   padding: 40px;
 }
 
-.login_area {
+.person_box {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 40px;
+  margin: 60px 40px 40px 40px;
 }
 
-.login_area_text {
+.person_text {
   font-size: 14px;
 }
 
-
-
-.password .useremail,
-.logim_password,
-#login_gamen_btn,
-#login_btn,
-#touroku_btn {
-  margin-top: 24px;
-}
-
-#new_btn {
-  margin-top: 8px;
+.login_username,
+.login_password {
+  margin-top: 36px;
 }
 
 

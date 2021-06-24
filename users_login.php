@@ -16,7 +16,7 @@
   <section class="form_parent">
 
 
-      <img src="./image/rogo.png">
+    <img src="./image/rogo.png">
 
 
     <h1>Stillartにログイン</h1>
@@ -26,26 +26,26 @@
     <form class="form" action="./users_login_act.php" method="post">
 
 
-      <div class="secondbox">
-        <div>
-          <input type="text" class="login_username" name="user_name" placeholder="ユーザー名">
-        </div>
-        <div>
-          <input type="password" class="logim_password" name="password" placeholder="パスワード">
-        </div>
-        <div>
-          <button class="action_btn" id="login_btn">ログイン</button>
-        </div>
+      <div>
+        <input type="text" class="login_username" name="user_name" placeholder="ユーザー名">
+      </div>
+      <div>
+        <input type="password" class="login_password" name="password" placeholder="パスワード">
+      </div>
+
+      <div>
+        <button class="action_btn">ログイン</button>
       </div>
 
     </form>
 
     <!-- 新規会員登録 -->
 
-    <div class="firstbox">
-      <p class="newperson_text">アカウントをお持ちでない方</p>
-      <button class="action_btn" id="new_btn" onclick="location.href='./users/users_input.php'">新規会員登録</a>
+    <div class="person_box">
+      <p class="person_text">アカウントをお持ちでない方</p>
+      <button class="action_btn" onclick="location.href='./users/users_input.php'">新規会員登録</a>
     </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="kasho.js"></script>
 </body>
