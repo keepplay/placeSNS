@@ -193,6 +193,11 @@ button:active {
     inset -11px -11px 22px #fcffff;
 }
 
+/* アイコンの色 */
+[class^="material"] {
+
+  color: #686868;
+}
 
 .text_area {
   width: 260px;
@@ -210,61 +215,6 @@ button:active {
   border-color: var(--color_blue_light);
 }
 
-
-/* ヘッダー
-header {
-  background: linear-gradient(134.17deg, #EEF0F5 4.98%, #E6E9EF 94.88%);
-  box-shadow: -12px -12px 20px rgba(255, 255, 255, 0.8),
-    10px 10px 20px rgba(166, 180, 200, 0.7);
-  width: 340px;
-  height: 60px;
-  position: fixed;
-  display: block;
-}
-.site_header {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-.icon {
-  padding: 11px;
-}
-.gnav__menu {
-  display: flex;
-  padding: 8px;
-}
-.gnav__menu__item {
-  margin-left: 20px;
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(134.17deg, #EEF0F5 4.98%, #E6E9EF 94.88%);
-  box-shadow: -12px -12px 20px rgba(255, 255, 255, 0.8),
-    10px 10px 20px rgba(166, 180, 200, 0.7);
-  /* border: solid 1px rgba(159, 175, 180, 0.103); */
-/* border-radius: 50%; */
-/* text-align: center; */
-/* }
-
-.gnav__menu__item:hover {
-  background: var(--color_blue_light);
-}
-
-.gnav__menu__item:active {
-  background: var(--color_blue_light);
-  box-shadow: inset 11px 11px 22px #d6dadd,
-    inset -11px -11px 22px #fcffff;
-}
-
-.material-icons {
-  color: #686868;
-  vertical-align: -8px;
-}
-
-.gnav__menu__item a {
-  color: #333;
-  text-decoration: none;
-} */
-*/
 
 /* 投稿 */
 .post_area {
@@ -326,3 +276,39 @@ header {
   font-size: 14px;
   color: #686868;
 }
+
+/***追従するトップへ戻るボタン***/
+
+.footer_btn_area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 36px 0 0;
+}
+
+#page-top {
+
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(134.17deg, #EEF0F5 4.98%, #E6E9EF 94.88%);
+  box-shadow: -12px -12px 20px rgba(255, 255, 255, 0.8),
+    10px 10px 20px rgba(166, 180, 200, 0.7);
+  border-radius: 999px;
+  position: fixed;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+
+}
+
+#page-top:hover {
+  background: var(--color_blue_light);
+}
+
+#page-top:active {
+  background: var(--color_blue_light);
+  box-shadow: inset 11px 11px 22px #d6dadd,
+    inset -11px -11px 22px #fcffff;
+}
+
+/***トップへ戻るボタンここまで***/

@@ -82,6 +82,9 @@ if ($status == false) {
 
   <div class="warapper">
 
+
+
+
     <div class="post_area">
     </div>
 
@@ -98,6 +101,12 @@ if ($status == false) {
 
 
 
+    <!-- 投稿ボタン固定 -->
+    <div class="footer_btn_area">
+      <p>
+        <a href="post_input.php" id="page-top"><span class="material-icons">edit</span></a>
+      </p>
+    </div>
   </div>
   <script>
     // map表示用に使用する変数
@@ -145,13 +154,13 @@ if ($status == false) {
         if (post_data[i].post_lat == lat && post_data[i].post_lng == lng) {
           output += "<div class='post_card'>";
 
-          
+
           if (post_data[i].post_image != null) {
             output += "<img class='post_img'  width='500' height='500'alt='' src=" + post_data[i].post_image + ">";
           }
-            output += "<div class='post_text'>";
-            output += "<p>" + post_data[i].post_text + "</p>";
-            output += "</div>";
+          output += "<div class='post_text'>";
+          output += "<p>" + post_data[i].post_text + "</p>";
+          output += "</div>";
 
           output += "<div class='post_icon_area'>";
           output += "<p class='post_icon'>";

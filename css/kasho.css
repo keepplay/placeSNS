@@ -156,28 +156,11 @@ body {
     -apple-system,
     BlinkMacSystemFont,
     sans-serif;
-
   background: linear-gradient(118.47deg, #E9EDF0 0.61%, #E9EDF0 100%);
-
-
 }
 
-.icon{
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-
-
-h1 {
-  margin: 16px auto;
-  text-align: center;
-  font-size: 19px;
-  font-weight: 800;
-}
-
-h2{
-  margin: top 10px;
+h2 {
+  margin-top: 60px;
   text-align: center;
   font-size: 19px;
   font-weight: 800;
@@ -186,6 +169,11 @@ h2{
 .form_parent {
   width: 360px;
   margin: 64px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  ;
 }
 
 .form {
@@ -245,6 +233,7 @@ input::placeholder {
   height: 48px;
   color: #757575;
 }
+
 input:focus {
   background: var(--color_blue_light);
 }
@@ -254,16 +243,7 @@ input:focus {
 /* 個別*/
 
 
-.firstbox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 40px;
-  margin-top: 30px;
-}
-
-.secondbox {
+.input_area {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -271,8 +251,7 @@ input:focus {
   padding: 40px;
 }
 
-.thirdbox {
-  border-bottom: 1px solid #B1BDCE;
+.login_area {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -280,13 +259,13 @@ input:focus {
   padding: 40px;
 }
 
-.newperson_text {
+.login_area_text {
   font-size: 14px;
 }
 
 
-.password
-.useremail,
+
+.password .useremail,
 .logim_password,
 #login_gamen_btn,
 #login_btn,
