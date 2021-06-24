@@ -79,9 +79,7 @@ if ($status == false) {
 
   -->
 
-  <!-- リロードボタン -->
-  <button id=reload>リロードする</button>
-
+  
   <div class="warapper">
 
 
@@ -102,13 +100,27 @@ if ($status == false) {
 
 
 
+    <footer>
+      <!-- かしょまるがんばって！おなしゃす！ -->
+      <!-- 投稿ボタン固定 -->
+      <div class="footer_wrapper">
+        <div class="footer_btn_area">
+            <a href="post_input.php" id="page-top"><span class="material-icons">edit</span></a>
+        </div>
 
-    <!-- 投稿ボタン固定 -->
-    <div class="footer_btn_area">
-      <p>
-        <a href="post_input.php" id="page-top"><span class="material-icons">edit</span></a>
-      </p>
-    </div>
+        <!-- リロードボタン -->
+        <div>
+          <button id="reload" class="reload">リロード</button>
+        </div>
+        <div>
+          <button id="reload" class="reload">リロード</button>
+        </div>
+        <div>
+          <button id="reload" class="reload">リロード</button>
+        </div>
+      </div>
+
+    </footer>
   </div>
   <script>
     // map表示用に使用する変数
