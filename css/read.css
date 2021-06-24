@@ -283,7 +283,13 @@ button:active {
 
 /* 場所名 */
 .post_place {
-  padding: 30px 15px 30px 15px;
+  padding-left:15px ;
+  padding-top: 8px;
+}
+
+p.post_place {
+  font-weight: bold;
+  font-size: 12px;
 }
 
 /* コメント */
