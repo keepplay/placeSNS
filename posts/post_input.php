@@ -3,7 +3,6 @@ include('../functions.php');
 session_start();
 // check_session_id();
 ?>
-
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -13,6 +12,7 @@ session_start();
   <!-- マテリアルアイコン -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="../css/post.css">
+  <link rel="icon" href="../image/icon.png">
 
 
   <title>投稿作成</title>
@@ -65,8 +65,8 @@ session_start();
       <form action="post_create.php" method="POST" enctype="multipart/form-data">
 
         <div class="post_text">
-          <input type="text" name="location_name" placeholder="場所名を入力">
           <textarea class="text_area" rows="10" cols="50" name="post_text" placeholder="テキストを入力" autofocus required></textarea>
+          <input type="text" class="place_area" name="location_name" placeholder="場所名を入力" maxlength="16">
 
           <div class="post_img">
             <label for="file" class="file_btn_text">
