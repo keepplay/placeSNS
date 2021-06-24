@@ -79,6 +79,8 @@ if ($status == false) {
 
   -->
 
+  <!-- リロードボタン -->
+  <button id=reload>リロードする</button>
 
   <div class="warapper">
 
@@ -203,6 +205,14 @@ if ($status == false) {
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="../kasho.js"></script>
+
+  <!-- リロード処理 -->
+  <script>
+    $('#reload').on('click',()=>{
+      location.reload();
+    }
+    );
+  </script>
 </body>
 
 </html>
