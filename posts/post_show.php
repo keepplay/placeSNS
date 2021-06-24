@@ -78,12 +78,13 @@ if ($status_comment == false) {
     <div class="warapper">
 
         <div class="header">
-
             <div class="left_header">
-                <div class="gnav__menu__item"><a href="post_read.php"></a>
+                <div class="gnav__menu__item" onclick="location.href='post_read.php'">
                     <span class="material-icons">chevron_left</span>
                 </div>
             </div>
+
+
 
             <div class="right_header">
                 <div>
