@@ -215,14 +215,28 @@ input::placeholder {
   border-radius: 4px;
   font-size: 16px;
   resize: none;
-
-
-
 }
 
 .text_area:focus {
   background: var(--color_blue_light);
 }
+
+.place_area {
+  width: 300px;
+  margin: auto;
+  padding: 10px 16px 8px;
+  background: linear-gradient(134.17deg, #EEF1F5 4.98%, #E6E9EF 94.88%);
+  box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.75),
+    inset 5px 5px 10px rgba(166, 180, 200, 0.75);
+  border-radius: 4px;
+  font-size: 16px;
+  margin-top: 36px;
+}
+
+.place_area:focus {
+  background: var(--color_blue_light);
+}
+
 
 
 /* ヘッダー */
@@ -294,29 +308,10 @@ input::placeholder {
 }
 
 
-
-
-/* 地図 */
-.map_area {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-}
-
-#map {
-  width: 300px;
-  height: 300px;
-  margin: 24px;
-  padding: 0;
-
-}
-
 /* 写真投稿 */
 
 .post_img {
-  margin-top: 24px;
+  margin-top: 36px;
   display: flex;
   justify-content: center;
   align-items: center;
