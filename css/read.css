@@ -382,3 +382,9 @@ footer {
   top: 25%;
   left: 27%;
 }
+
+/* コメント数 */
+.comment_count{
+  margin-left: 5px;
+  vertical-align: top;
+}
