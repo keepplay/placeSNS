@@ -203,8 +203,11 @@ input::placeholder {
   color: #757575;
 } */
 
+
+
 .text_area {
-  width: 340px;
+  width: 300px;
+  margin: auto;
   padding: 10px 16px 8px;
   background: linear-gradient(134.17deg, #EEF1F5 4.98%, #E6E9EF 94.88%);
   box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.75),
@@ -214,13 +217,11 @@ input::placeholder {
   resize: none;
 
 
+
 }
 
 .text_area:focus {
-  border-color: var(--color_blue_light);
   background: var(--color_blue_light);
-
-
 }
 
 
@@ -294,10 +295,6 @@ input::placeholder {
 
 
 
-.post_text {
-  width: 340px;
-  margin: auto;
-}
 
 /* 地図 */
 .map_area {
