@@ -6,7 +6,9 @@ session_start();
 $pdo = connect_to_db();
 
 
-$sql = 'SELECT * FROM posts_table';
+$sql = 'SELECT * FROM posts_table
+LEFT OUTER JOIN (SELECT for_post_id, COUNT(id) AS comment_count FROM comment_table GROUP BY for_post_id) AS  comment_count
+ON posts_table.post_id = comment_count.for_post_id';
 
 $stmt = $pdo->prepare($sql);
 $status = $stmt->execute();
@@ -165,7 +167,19 @@ if ($status == false) {
           output += "<a href='post_show.php?post_id=" + post_data[i].post_id + "'>";
           output += "<span class='material-icons'>chat</span>";
           output += "</a>";
+
+
+          // コメント数の表示
+          output += "<a href='post_show.php?post_id=" + post_data[i].post_id + "'>";
+          if (post_data[i].comment_count != null) {
+            output += "<span>"+ post_data[i].comment_count +"</span>";
+          }else{
+            output += "<span>0</span>";
+          }
+          output += "</a>";
+
           output += "</p>";
+
           output += "<p class='post_time'>" + post_data[i].post_created_at + "</p>";
 
           output += "</div>";

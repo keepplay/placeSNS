@@ -7,8 +7,8 @@ $pdo = connect_to_db();
 
 
 $sql = 'SELECT * FROM posts_table
-LEFT OUTER JOIN (SELECT post_id, COUNT(id) AS comment_count FROM comment_table GROUP BY post_id) AS  comment_count
-ON posts_table.post_id = comment_count.post_id';
+LEFT OUTER JOIN (SELECT for_post_id, COUNT(id) AS comment_count FROM comment_table GROUP BY for_post_id) AS  comment_count
+ON posts_table.post_id = comment_count.for_post_id';
 
 $stmt = $pdo->prepare($sql);
 $status = $stmt->execute();
