@@ -102,10 +102,10 @@ if ($status_comment == false) {
         <!-- コメントされる側の投稿 -->
         <div class="posted_card">
             <!-- デザイン皆無です、お願いします -->
-            <p class="posted_text"><?= $record['post_text'] ?></p>
             <p class="posted_img">
                 <img src=<?= $record['post_image'] ?>>
             </p>
+            <p class="posted_text"><?= $record['post_text'] ?></p>
             <p class="posted_time"><?= $record['post_created_at'] ?></p>
         </div>
 
