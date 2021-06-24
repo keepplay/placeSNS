@@ -279,13 +279,13 @@ button:active {
 
 /***追従するトップへ戻るボタン***/
 
-.footer_btn_area {
+/* .footer_btn_area {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin: 36px 0 0;
-}
+} */
 
 #page-top {
 
@@ -312,3 +312,22 @@ button:active {
 }
 
 /***トップへ戻るボタンここまで***/
+
+footer {
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  width: 360px;
+}
+
+.footer_wrapper{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content:space-evenly;
+  flex-direction: row;
+}
+
+.reload {
+  width: 60px;
+}
