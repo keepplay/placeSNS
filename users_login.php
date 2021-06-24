@@ -15,9 +15,8 @@
 
   <section class="form_parent">
 
-    <div class="icon">
+
       <img src="./image/rogo.png">
-    </div>
 
 
     <h1>Stillartにログイン</h1>
