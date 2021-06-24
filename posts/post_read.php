@@ -170,7 +170,7 @@ if ($status == false) {
 
 
           // コメント数の表示
-          output += "<a href='post_show.php?post_id=" + post_data[i].post_id + "'>";
+          output += "<a class='comment_count' href='post_show.php?post_id=" + post_data[i].post_id + "'>";
           if (post_data[i].comment_count != null) {
             output += "<span>"+ post_data[i].comment_count +"</span>";
           }else{
