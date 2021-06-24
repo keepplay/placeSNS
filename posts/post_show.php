@@ -25,14 +25,18 @@ if ($status == false) {
     $record = $stmt->fetch(PDO::FETCH_ASSOC);
 }
 
+$for_post_id = $_GET['post_id'];
 
-$sql_comment = 'SELECT * FROM comment_table WHERE post_id=:post_id ';
+
+$sql_comment = 'SELECT * FROM comment_table WHERE for_post_id=:for_post_id ';
 
 
 $stmt_comment = $pdo->prepare($sql_comment);
-$stmt_comment->bindValue(':post_id', $post_id, PDO::PARAM_INT);
+$stmt_comment->bindValue(':for_post_id', $for_post_id, PDO::PARAM_INT);
 $status_comment = $stmt_comment->execute();
 
+// var_dump($for_post_id);
+// exit();
 if ($status_comment == false) {
     $error = $stmt_comment->errorInfo();
     echo json_encode(["error_msg" => "{$error[2]}"]);
@@ -46,7 +50,7 @@ if ($status_comment == false) {
         $output .= "<div class='comment_footer'>";
         $output .= "<p class='post_time'>{$record_comment["comment_created_at"]}</p>";
         $output .= "<p class='post_icon'>
-                <a href='./post_comment__delete.php?id={$record_comment["id"]}&post_id={$post_id}'>
+                <a href='./post_comment__delete.php?id={$record_comment["id"]}&post_id={$for_post_id}'>
                 <span class='material-icons'>
                 delete</span></a></p>";
         $output .= "</div>";
