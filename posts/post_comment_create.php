@@ -10,7 +10,7 @@ if (
     exit();
 }
 
-$post_id = $_POST['post_id'];
+$for_post_id = $_POST['post_id'];
 $comment_text = $_POST['comment_text'];
 // var_dump($post_id);
 // var_dump($comment_text);
@@ -18,11 +18,11 @@ $comment_text = $_POST['comment_text'];
 
 $pdo = connect_to_db();
 
-$sql = 'INSERT INTO comment_table(id, comment_text, post_id, comment_created_at)
-VALUES(NULL, :comment_text, :post_id, sysdate())';
+$sql = 'INSERT INTO comment_table(id, comment_text, for_post_id, comment_created_at)
+VALUES(NULL, :comment_text, :for_post_id, sysdate())';
 
 $stmt = $pdo->prepare($sql);
-$stmt->bindValue(':post_id', $post_id, PDO::PARAM_INT);
+$stmt->bindValue(':for_post_id', $for_post_id, PDO::PARAM_INT);
 $stmt->bindValue(':comment_text', $comment_text, PDO::PARAM_STR);
 $status = $stmt->execute();
 
@@ -31,7 +31,7 @@ if ($status == false) {
     echo json_encode(["error_msg" => "{$error[2]}"]);
     exit();
 } else {
-    header("Location:post_show.php?post_id={$post_id}");
+    header("Location:post_show.php?post_id={$for_post_id}");
     exit();
 }
 

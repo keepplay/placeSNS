@@ -7,7 +7,7 @@ session_start();
 // check_session_id();
 
 $id = $_GET["id"];
-$post_id=$_GET["post_id"];
+$for_post_id=$_GET["post_id"];
 // var_dump($post_id);
 // exit();
 
@@ -26,6 +26,6 @@ if ($status == false) {
     echo json_encode(["error_msg" => "{$error[2]}"]);
     exit();
 } else {
-    header("Location:post_show.php?post_id=$post_id");
+    header("Location:post_show.php?post_id=$for_post_id");
     exit();
 }
