@@ -42,13 +42,13 @@
           <button class="action_btn" id="touroku_btn">登録する</button>
         </div>
       </div>
-      <div class="secondbox">
-        <p class="newperson_text">アカウントをお持ちの方はこちら</p>
-
-        <button class="action_btn" id="login_gamen_btn" onclick="loction.href='../users_login.php'">ログイン画面へ</a>
-
-      </div>
     </form>
+    <div class="secondbox">
+      <p class="newperson_text">アカウントをお持ちの方はこちら</p>
+
+      <button class="action_btn" id="login_gamen_btn" onclick="location.href='../users_login.php'">ログイン画面へ</a>
+
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="../kasho.js"></script>
 </body>

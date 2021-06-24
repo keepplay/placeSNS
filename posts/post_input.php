@@ -65,44 +65,43 @@ session_start();
       <form action="post_create.php" method="POST" enctype="multipart/form-data">
 
         <div class="post_text">
-          G's Academy<textarea class="text_area" rows="10" cols="50" name="post_text" placeholder="テキストを入力" autofocus required></textarea>
-        </div>
+          <textarea class="text_area" rows="10" cols="50" name="post_text" placeholder="テキストを入力" autofocus required></textarea>
 
-        <div class="post_img">
-          <label for="file" class="file_btn_text">
-            <div class="file_btn"><span><i class="material-icons" id="add_photo">
-                  add_photo_alternate
-                </i>写真を添付<span>
-            </div>
-          </label>
-          <input type="file" id="file" class="fileinput" name="post_image" accept="image/*" capture="camera">
+          <div class="post_img">
+            <label for="file" class="file_btn_text">
+              <div class="file_btn"><span><i class="material-icons" id="add_photo">
+                    add_photo_alternate
+                  </i>写真を添付<span>
+              </div>
+            </label>
+            <input type="file" id="file" class="fileinput" name="post_image" accept="image/*" capture="camera">
 
-          <div id="preview"></div>
-        </div>
+            <div id="preview"></div>
+          </div>
 
-        <div>
-          <input type="hidden" id="post_lat" name="post_lat">
-        </div>
-        <div>
-          <input type="hidden" id="post_lng" name="post_lng">
-        </div>
+          <div>
+            <input type="hidden" id="post_lat" name="post_lat">
+          </div>
+          <div>
+            <input type="hidden" id="post_lng" name="post_lng">
+          </div>
 
 
-        <div class="submit_btn">
-          <button><i class="material-icons" id="push_pin">
-              push_pin</i>書き残す</button>
+          <div class="submit_btn">
+            <button><i class="material-icons" id="push_pin">
+                push_pin</i>書き残す</button>
+          </div>
+
         </div>
+      </form>
+
+
+
 
     </div>
-    </form>
 
 
-
-
-  </div>
-
-
-  <!-- <section class="map_area">
+    <!-- <section class="map_area">
     <p>位置情報取得&Map表示</p>
     <div id="map"></div>
   </section> -->
