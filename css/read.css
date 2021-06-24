@@ -161,6 +161,12 @@ body {
   margin-top: 0;
 }
 
+
+/* アイコンの色 */
+[class^="material"] {
+  color: #686868;
+}
+
 .warapper {
   width: 360px;
   display: flex;
@@ -169,9 +175,46 @@ body {
   flex-direction: column;
   margin: auto;
   padding: 64px 0;
+}
+
+.header {
+  width: 300px;
+  margin: auto;
+  padding: 24px 0 0;
+
+  display: flex;
+  justify-content: flex-end;
 
 }
 
+
+.logout_btn {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(134.17deg, #EEF0F5 4.98%, #E6E9EF 94.88%);
+  box-shadow: -10px -10px 18px rgba(255, 255, 255, 0.8),
+    10px 10px 18px rgba(166, 180, 200, 0.65);
+  border-radius: 999px;
+  position: relative;
+  text-align: right;
+}
+
+.logout_btn:hover {
+  background: var(--color_blue_light);
+}
+
+.logout_btn:active {
+  background: var(--color_blue_light);
+  box-shadow: inset 11px 11px 22px #d6dadd,
+    inset -11px -11px 22px #fcffff;
+}
+
+
+.icon_logout {
+  position: absolute;
+  top: 27%;
+  left: 32%;
+}
 
 button {
   width: 260px;
@@ -193,11 +236,6 @@ button:active {
     inset -11px -11px 22px #fcffff;
 }
 
-/* アイコンの色 */
-[class^="material"] {
-
-  color: #686868;
-}
 
 .text_area {
   width: 260px;
@@ -216,7 +254,7 @@ button:active {
 }
 
 
-/* 投稿 */
+/* 投稿表示するとこ*/
 .post_area {
   display: flex;
   justify-content: center;
@@ -225,6 +263,7 @@ button:active {
   margin: auto;
 }
 
+/* 1個1個の投稿 */
 .post_card {
   background: linear-gradient(134.17deg, #EEF0F5 4.98%, #E6E9EF 94.88%);
   box-shadow: -18.1166px -18.1166px 30.1944px rgba(255, 255, 255, 0.8),
@@ -242,10 +281,17 @@ button:active {
   margin: 36px 0 0;
 }
 
+/* 場所名 */
+.post_place {
+  padding: 30px 15px 30px 15px;
+}
+
+/* コメント */
 .post_text {
   padding: 5px 15px 30px 15px;
 }
 
+/* 写真 */
 .post_img {
   padding: 10px;
   width: 100%;
@@ -256,78 +302,77 @@ button:active {
 
 
 .post_icon_area {
+  width: 300px;
   display: flex;
-  align-items: center;
-}
+  margin: 0 0 15px 0;
+  justify-content: space-around;
 
-.material-icons {
-  font-size: 27px;
-}
-
-.post_icon {
-  padding-top: 5px;
-  padding-left: 15px;
 
 }
 
 .post_time {
-  padding-left: 100px;
-  padding-bottom: 6px;
   font-size: 14px;
   color: #686868;
 }
 
-/***追従するトップへ戻るボタン***/
-
-/* .footer_btn_area {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 36px 0 0;
-} */
-
-#page-top {
-
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(134.17deg, #EEF0F5 4.98%, #E6E9EF 94.88%);
-  box-shadow: -12px -12px 20px rgba(255, 255, 255, 0.8),
-    10px 10px 20px rgba(166, 180, 200, 0.7);
-  border-radius: 999px;
-  position: fixed;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
-
-}
-
-#page-top:hover {
-  background: var(--color_blue_light);
-}
-
-#page-top:active {
-  background: var(--color_blue_light);
-  box-shadow: inset 11px 11px 22px #d6dadd,
-    inset -11px -11px 22px #fcffff;
-}
-
-/***トップへ戻るボタンここまで***/
+/* フッター */
 
 footer {
   height: 100px;
   position: absolute;
   bottom: 0;
-  width: 360px;
+  width: 300px;
 }
 
-.footer_wrapper{
+.footer_wrapper {
   position: fixed;
   display: flex;
   align-items: center;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   flex-direction: row;
+  width: 300px;
 }
 
-.reload {
-  width: 60px;
+
+.footer_btn {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(134.17deg, #EEF0F5 4.98%, #E6E9EF 94.88%);
+  box-shadow: -10px -10px 18px rgba(255, 255, 255, 0.8),
+    10px 10px 18px rgba(166, 180, 200, 0.65);
+  border-radius: 999px;
+  position: relative;
+  text-align: right;
+}
+
+.footer_btn:hover {
+  background: var(--color_blue_light);
+}
+
+.footer_btn:active {
+  background: var(--color_blue_light);
+  box-shadow: inset 11px 11px 22px #d6dadd,
+    inset -11px -11px 22px #fcffff;
+}
+
+
+/* トップへ */
+.icon_navigation {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}
+
+/* 投稿 */
+.icon_edit {
+  position: absolute;
+  top: 25%;
+  left: 28%;
+}
+
+/* 更新 */
+.icon_refresh {
+  position: absolute;
+  top: 25%;
+  left: 27%;
 }

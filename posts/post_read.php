@@ -51,40 +51,24 @@ if ($status == false) {
   <!-- マテリアルアイコン -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="../css/read.css">
+  <link rel="icon" href="../image/icon.png">
 
   <title>一覧画面</title>
 </head>
 
 <body>
-  <!--
 
-  <header class="site_header">
-    <div class="icon">
-      <img src="../image/icon.png">
+  <!-- ログアウトボタン -->
+  <div class="header">
+    <div class="logout_btn" onclick="location.href='../users_logout.php'">
+      <span class="material-icons icon_logout">logout</span>
     </div>
-    <nav class="gnav">
-      <ul class="gnav__menu">
+  </div>
 
-        <li class="gnav__menu__item"><a href="post_input.php"><span class="material-icons">
-              edit
-            </span></li>
 
-        <li class="gnav__menu__item"><a href="post_logout.php"><span class="material-icons">
-              logout
-            </span></a></li>
-
-  </ul>
-  </nav>
-  </header>
-
-  -->
-
-  
   <div class="warapper">
 
-
-
-
+    <!-- 投稿内容 -->
     <div class="post_area">
     </div>
 
@@ -98,26 +82,22 @@ if ($status == false) {
       の形でデータが入る -->
     <!-- <?= $output ?> -->
 
-
-
+    <!-- フッター -->
     <footer>
       <!-- かしょまるがんばって！おなしゃす！ -->
       <!-- 投稿ボタン固定 -->
       <div class="footer_wrapper">
-        <div class="footer_btn_area">
-            <a href="post_input.php" id="page-top"><span class="material-icons">edit</span></a>
-        </div>
 
-        <!-- リロードボタン -->
-        <div>
-          <button id="reload" class="reload">リロード</button>
-        </div>
-        <div>
-          <button id="reload" class="reload">リロード</button>
-        </div>
-        <div>
-          <button id="reload" class="reload">リロード</button>
-        </div>
+        <button id="page_top" class="footer_btn" onclick="location.href='post_read.php'">
+          <span class="material-icons icon_navigation">navigation</span></button>
+
+        <button class="footer_btn" onclick="location.href='post_input.php'">
+          <span class="material-icons icon_edit">edit</span></button>
+
+        <button id="reload" class="footer_btn">
+          <span class="material-icons icon_refresh">refresh</span></button>
+
+
       </div>
 
     </footer>
@@ -161,6 +141,7 @@ if ($status == false) {
       $("#post_lat").val(lat);
       $("#post_lng").val(lng);
 
+
       const post_data = <?= json_encode($result) ?>;
       console.log(post_data);
       let output = "";
@@ -170,7 +151,7 @@ if ($status == false) {
           output += "<div class='post_card'>";
           console.log(post_data[i].location_name);
           if (post_data[i].location_name != null) {
-            output += "<p>" + post_data[i].location_name + "</p>";
+            output += "<p class='post_place'>" + post_data[i].location_name + "</p>";
           }
           if (post_data[i].post_image != null) {
             output += "<img class='post_img'  width='500' height='500'alt='' src=" + post_data[i].post_image + ">";
@@ -220,11 +201,21 @@ if ($status == false) {
 
   <!-- リロード処理 -->
   <script>
-    $('#reload').on('click',()=>{
+    $('#reload').on('click', () => {
       location.reload();
-    }
-    );
+    });
   </script>
+
+  <!-- トップへ戻る -->
+  <script>
+    $('#page_top').click(function() {
+      $('body,html').animate({
+        scrollTop: 0 //ページトップまでスクロール
+      }, 500); //ページトップスクロールの速さ。数字が大きいほど遅くなる
+      return false; //リンク自体の無効化
+    });
+  </script>
+
 </body>
 
 </html>

@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/kasho.css">
-  <link rel="icon" href="../image/icon.png">
+  <link rel="icon" href="image/icon.png">
   <title>ログイン画面</title>
 </head>
 
