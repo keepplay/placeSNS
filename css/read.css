@@ -316,6 +316,8 @@ p.post_place {
 
 }
 
+
+
 .post_time {
   font-size: 14px;
   color: #686868;
@@ -385,6 +387,7 @@ footer {
 
 /* コメント数 */
 .comment_count{
+  margin-bottom: 30px;
   margin-left: 5px;
   vertical-align: top;
 }
