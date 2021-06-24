@@ -65,6 +65,7 @@ session_start();
       <form action="post_create.php" method="POST" enctype="multipart/form-data">
 
         <div class="post_text">
+          <input type="text" name="location_name" placeholder="場所名を入力">
           <textarea class="text_area" rows="10" cols="50" name="post_text" placeholder="テキストを入力" autofocus required></textarea>
 
           <div class="post_img">
