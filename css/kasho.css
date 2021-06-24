@@ -105,7 +105,7 @@ a {
 }
 
 img {
-  width: 20%;
+  width: 60%;
   height: auto;
   vertical-align: bottom;
 }
@@ -162,10 +162,10 @@ body {
 
 }
 
-.icon{
+.rogo{
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
 }
 
 
