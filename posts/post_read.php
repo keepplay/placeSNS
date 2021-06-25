@@ -147,7 +147,7 @@ if ($status == false) {
       const post_data = <?= json_encode($result) ?>;
       console.log(post_data);
       let output = "";
-      for (let i = 1; i < post_data.length; i++) {
+      for (let i = 0; i < post_data.length; i++) {
         // 現在地と同じ位置情報の投稿を表示
         if (post_data[i].post_lat == lat && post_data[i].post_lng == lng) {
           output += "<div class='post_card'>";
@@ -192,7 +192,7 @@ if ($status == false) {
     }
     // console.log("現在地"+lat);
     // console.log("現在地"+lng);
-    // console.log(post_data);
+   
 
 
     // 位置情報の取得
