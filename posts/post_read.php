@@ -192,7 +192,7 @@ if ($status == false) {
     }
     // console.log("現在地"+lat);
     // console.log("現在地"+lng);
-    // console.log(post_data);
+   
 
 
     // 位置情報の取得
