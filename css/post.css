@@ -251,16 +251,16 @@ input::placeholder {
 }
 
 .left_header {
-  width: 50%;
+  width: 40%;
 }
 
 .right_header {
-  width: 50%;
+  width: 60%;
 }
 
 .icon {
-  width: 20%;
-  margin-left: 130px;
+  width: 15%;
+  margin-left: 10px;
 }
 
 .gnav__menu__item {

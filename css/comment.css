@@ -168,6 +168,7 @@ body {
   align-items: center;
   flex-direction: column;
   margin: auto;
+  padding: 0 0 64px 0;
 }
 
 /* ヘッダー */
@@ -259,6 +260,16 @@ body {
   flex-direction: column; */
 }
 
+.posted_place {
+  padding-left:15px ;
+  padding-top: 8px;
+}
+
+p.posted_place {
+  font-weight: bold;
+  font-size: 12px;
+}
+
 .posted_text {
   padding: 16px;
 }
@@ -332,7 +343,7 @@ body {
 
 /* コメント表示エリア */
 .comment_area {
-  margin: 128px 0 0;
+  margin: 90px 0 0;
 
 
 }

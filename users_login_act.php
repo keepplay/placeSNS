@@ -33,6 +33,6 @@ if(!$val){
     $_SESSION['user_name']= $val['user_name'];
     // URL長めに入れないと通らない
     // 各自自分のに合わせて
-    header("Location: /G's/team_dev_php/posts/post_read.php");
+    header("Location: /gs_code/placeSNS/posts/post_read.php");
     exit();
 }

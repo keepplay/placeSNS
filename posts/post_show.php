@@ -25,6 +25,14 @@ if ($status == false) {
     $record = $stmt->fetch(PDO::FETCH_ASSOC);
 }
 
+// 写真がない投稿のときはimageタグなしにする
+$main_post = "";
+if ($record['post_image'] != NULL) {
+    $main_post = "<p class='posted_img'><img src={$record['post_image']}></p>";
+}
+
+
+
 $for_post_id = $_GET['post_id'];
 
 
@@ -61,6 +69,7 @@ if ($status_comment == false) {
     }
 }
 
+
 ?>
 
 
@@ -88,8 +97,6 @@ if ($status_comment == false) {
                 </div>
             </div>
 
-
-
             <div class="right_header">
                 <div>
                     <img class="icon" src="../image/icon.png">
@@ -101,10 +108,9 @@ if ($status_comment == false) {
 
         <!-- コメントされる側の投稿 -->
         <div class="posted_card">
+            <p class="posted_place"><?= $record['location_name'] ?></p>
             <!-- デザイン皆無です、お願いします -->
-            <p class="posted_img">
-                <img src=<?= $record['post_image'] ?>>
-            </p>
+            <?= $main_post ?>
             <p class="posted_text"><?= $record['post_text'] ?></p>
             <p class="posted_time"><?= $record['post_created_at'] ?></p>
         </div>
